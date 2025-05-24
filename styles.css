@@ -28,6 +28,12 @@ a {
   height: 60px;
 }
 
+.logo img {
+  height: 40px;
+  width: auto;
+}
+
+
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
@@ -48,7 +54,7 @@ a {
   top: 100%;
   left: 0;
   background: #fff;
-  color: #000;
+  color: #ffffff;
   display: none;
   flex-direction: row;
   padding: 1rem;
