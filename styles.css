@@ -17,7 +17,7 @@ a {
 
 .site-header {
   background: #ffffff;
-  color: white;
+  color: rgb(0, 0, 0);
   position: fixed;
   width: 100%;
   z-index: 1000;
@@ -53,7 +53,7 @@ a {
   position: absolute;
   top: 100%;
   left: 0;
-  background: #fff;
+  background: #000000;
   color: #ffffff;
   display: none;
   flex-direction: row;
@@ -74,7 +74,7 @@ a {
 .service-category h4 {
   margin-bottom: 0.5rem;
   font-size: 1rem;
-  color: #0d1c1d;
+  color: #ffffff;
 }
 
 .service-category ul {
@@ -82,7 +82,7 @@ a {
 }
 
 .service-category ul li a {
-  color: #333;
+  color: #ffffff;
   font-size: 0.9rem;
   display: block;
   margin-bottom: 0.3rem;
@@ -90,7 +90,7 @@ a {
 
 /* Login text */
 .login-link a {
-  color: white;
+  color: rgb(0, 0, 0);
   margin-left: 1rem;
 }
 
@@ -115,7 +115,7 @@ a {
   position: absolute;
   top: 60px;
   left: 0;
-  background: #ffffff;
+  background: #000000;
   width: 100%;
   flex-direction: column;
 }
