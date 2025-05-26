@@ -2,74 +2,120 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Asiatrix</title>
   <link rel="icon" type="image/png" href="logo/favicon.png">
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="footer.css" />
+  <script defer src="script.js"></script>
+  <script defer src="footer.js"></script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="mobile-menu-toggle" id="menuToggle">
-      <span></span><span></span><span></span>
+
+  <!-- HEADER -->
+  <header id="mainHeader" class="transparent">
+    <div class="container">
+    <div class="logo">
+    <img src="logo/favicon.png" alt="Asiatrix Logo" />
+  </div>
+
+      <nav class="desktop-menu">
+        <ul>
+          <li class="dropdown">What we do</li>
+          <li>What we think</li>
+          <li class="dropdown">Who we are</li>
+          <li>Pricing</li>
+          <li>Enterprise</li>
+        </ul>
+      </nav>
+
+      <div class="login-icon">
+        <img src="login-icon.svg" alt="Login" />
+      </div>
+
+      <!-- Mobile Hamburger Menu -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
-<div class="logo">
-  <img src="logo/logo.png" alt="Asiatrix Logo" />
-</div>
-    <nav class="desktop-menu">
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
       <ul>
-        <li class="dropdown" id="servicesMenu">
-          <a href="#" class="dropdown-toggle">Services</a>
-          <div class="dropdown-content">
-            <div class="service-category">
-              <h4>Creative design services</h4>
-              <ul>
-                <li><a href="#">Ad creative</a></li>
-                <li><a href="#">Social media creative</a></li>
-                <li><a href="#">Presentation design</a></li>
-              </ul>
-            </div>
-            <div class="service-category">
-              <h4>Production services</h4>
-              <ul>
-                <li><a href="#">Video production</a></li>
-                <li><a href="#">Motion design</a></li>
-              </ul>
-            </div>
-          </div>
-        </li>
-        <li class="dropdown" id="whyUsMenu">
-          <a href="#" class="dropdown-toggle">Why us</a>
-          <div class="dropdown-content">
-            <p>Reason 1</p>
-            <p>Reason 2</p>
-          </div>
-        </li>
-        <li class="dropdown" id="resourcesMenu">
-          <a href="#" class="dropdown-toggle">Resources</a>
-          <div class="dropdown-content">
-            <p>Blog</p>
-            <p>Case studies</p>
-          </div>
-        </li>
-        <li><a href="#">Pricing</a></li>
-        <li><a href="#">Enterprise</a></li>
+        <li class="dropdown">What we do</li>
+        <li>What we think</li>
+        <li class="dropdown">Who we are</li>
+        <li>Pricing</li>
+        <li>Enterprise</li>
       </ul>
-    </nav>
-    <div class="login-link">
-      <a href="#">Login</a>
     </div>
-    <nav class="mobile-menu" id="mobileMenu">
-      <ul>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Why us</a></li>
-        <li><a href="#">Resources</a></li>
-        <li><a href="#">Pricing</a></li>
-        <li><a href="#">Enterprise</a></li>
-        <li><a href="#">Login</a></li>
-      </ul>
-    </nav>
   </header>
 
-  <script src="script.js"></script>
+  <!-- VIDEO SECTION -->
+  <section class="video-section">
+    <video autoplay muted loop playsinline>
+      <source src="logo/home.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+  
+<!-- Cards Section -->
+<section class="cards-section">
+  <div class="cards-grid">
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <h5>PERSPECTIVE</h5>
+          <h3>Navigating the new tariff landscape and its economic impact</h3>
+          <img src="logo/X.png" alt="Card Image 1" />
+        </div>
+        <div class="card-back">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tariffs impact markets and reshape trade...</p>
+          <a href="#">Expand →</a>
+        </div>
+      </div>
+    </div>
+    <!-- Repeat this card block 7 more times with unique content/images -->
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <h2>Innovating Culture, Designing Futures</h2>
+      <div class="footer-links">
+        <ul>
+          <li>Preference Center</li>
+          <li>Careers</li>
+          <li>About Us</li>
+          <li>Contact Us</li>
+          <li>Locations</li>
+          <li>Sitemap</li>
+        </ul>
+        <ul>
+          <li>Privacy Statement</li>
+          <li>Terms & Conditions</li>
+          <li>Cookie Policy/Settings</li>
+          <li>Accessibility Statement</li>
+          <li>Legal</li>
+        </ul>
+      </div>
+      <p class="copyright">© 2025 Asiatrix. All Rights Reserved.</p>
+    </div>
+
+<div class="footer-right">
+  <div class="vertical-bars" id="verticalBars">
+    <!-- Bars will be dynamically generated -->
+  </div>
+</div>
+      </div>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
