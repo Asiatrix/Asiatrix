@@ -69,12 +69,16 @@ nav.desktop-menu {
   cursor: pointer;
 }
 
-/* Login Icon */
-.login-icon img {
-  width: 24px;
-  height: 24px;
+.login-icon i {
+  font-size: 24px;
+  color: #000000;
+  cursor: pointer;
+  transition: color 0.3s;
 }
 
+.login-icon i:hover {
+  color: #007bff;
+}
 /* Hamburger menu */
 .hamburger {
   display: none;
