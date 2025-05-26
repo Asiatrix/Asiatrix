@@ -1,27 +1,38 @@
-const header = document.getElementById("mainHeader");
-const videoSection = document.querySelector(".video-section");
-const hamburger = document.getElementById("hamburger");
-const mobileMenu = document.getElementById("mobileMenu");
+ const header = document.querySelector('header');
+  const hamburger = document.querySelector('.hamburger');
+  const mobileMenu = document.querySelector('.mobile-menu');
 
-// Hamburger toggle
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("active");
-  mobileMenu.classList.toggle("show");
-});
-
-// Header background on scroll
-window.addEventListener("scroll", () => {
-  const videoBottom = videoSection.offsetTop + videoSection.offsetHeight;
-  const scrollY = window.scrollY;
-
-  if (scrollY > videoBottom || scrollY > 50) {
-    header.classList.remove("transparent");
-    header.classList.add("white-bg");
-  } else {
-    header.classList.add("transparent");
-    header.classList.remove("white-bg");
+  function updateHeaderBackground() {
+    if (window.scrollY > 50 || header.matches(':hover') || hamburger.classList.contains('active')) {
+      header.classList.add('white-bg');
+    } else {
+      header.classList.remove('white-bg');
+    }
   }
-});
+
+  // Scroll event
+  window.addEventListener('scroll', updateHeaderBackground);
+
+  // Mouse enter/leave
+  header.addEventListener('mouseenter', updateHeaderBackground);
+  header.addEventListener('mouseleave', updateHeaderBackground);
+
+  // Toggle mobile menu
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    mobileMenu.classList.toggle('open');
+
+    if (mobileMenu.classList.contains('open')) {
+      header.classList.add('menu-open');
+    } else {
+      header.classList.remove('menu-open');
+    }
+
+    updateHeaderBackground();
+  });
 
 
-// Header background on scroll
+  function toggleCard(card) {
+    card.classList.toggle('show');
+  }
+
