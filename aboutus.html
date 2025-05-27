@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Our Company | Asiatrix</title>
+  <link rel="icon" type="image/png" href="logo/favicon.png">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="footer.css" />
+  <script defer src="script.js"></script>
+  <script defer src="footer.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff;
+      color: #333;
+    }
+
+    .about-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease;
+    }
+
+    .about-container.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .about-image {
+      flex: 1 1 400px;
+      padding: 20px;
+    }
+
+    .about-image img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+
+    .about-content {
+      flex: 1 1 400px;
+      padding: 20px;
+    }
+
+    .about-content h2 {
+      font-size: 2em;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .about-content p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 25px;
+      color: #555;
+    }
+
+    .read-more-btn {
+      background-color: #007BFF;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .read-more-btn:hover {
+      background-color: #0056b3;
+    }
+
+    @media (max-width: 768px) {
+      .about-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .about-content h2 {
+        font-size: 1.6em;
+      }
+
+      .read-more-btn {
+        width: 100%;
+        max-width: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+ 
+     <!-- HEADER -->
+  <header id="mainHeader" class="transparent">
+    <div class="container">
+    <div class="logo">
+    <img src="logo/logo.png" alt="Asiatrix Logo" />
+  </div>
+
+      <nav class="desktop-menu">
+        <ul>
+          <li class="dropdown">What we do</li>
+          <li>What we think</li>
+          <li class="dropdown">Who we are</li>
+          <li>Pricing</li>
+          <li>Enterprise</li>
+        </ul>
+      </nav>
+
+    <div class="login-icon">
+     <i class="far fa-user"></i>
+    </div>
+
+      <!-- Mobile Hamburger Menu -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li class="dropdown">What we do</li>
+        <li>What we think</li>
+        <li class="dropdown">Who we are</li>
+        <li>Pricing</li>
+        <li>Enterprise</li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="about-container" id="about">
+    <div class="about-image">
+      <img src="pictures/aboutus.jpeg" alt="About Asiatrix" />
+    </div>
+    <div class="about-content">
+      <h2>About Asiatrix</h2>
+      <p>
+        Asiatrix is a tech-powered creative agency built at the intersection of innovation, culture, and design. We help brands, startups, and visionary businesses turn ideas into bold digital experiences that resonate across borders.
+
+        Rooted in diverse cultural insights and driven by emerging technologies, our team blends strategic thinking, artistic direction, and technical precision to craft solutions that not only look great but work beautifully.
+
+        From brand identities and websites to custom platforms and marketing strategies, we build with purpose and imagination.
+      </p>
+      <button class="read-more-btn">Read More</button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <h2>Innovating Culture, Designing Futures</h2>
+      <div class="footer-links">
+        <ul>
+          <li>Preference Center</li>
+          <li>Careers</li>
+          <li>About Us</li>
+          <li>Contact Us</li>
+          <li>Locations</li>
+          <li>Sitemap</li>
+        </ul>
+        <ul>
+          <li>Privacy Statement</li>
+          <li>Terms & Conditions</li>
+          <li>Cookie Policy/Settings</li>
+          <li>Accessibility Statement</li>
+          <li>Legal</li>
+        </ul>
+      </div>
+      <p class="copyright">© 2025 Asiatrix. All Rights Reserved.</p>
+    </div>
+  <script>
+    // Fade-in effect on page load
+    window.addEventListener('DOMContentLoaded', () => {
+      const section = document.getElementById('about');
+      section.classList.add('visible');
+    });
+  </script>
+
+</body>
+</html>

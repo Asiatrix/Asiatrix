@@ -1,6 +1,6 @@
  const header = document.querySelector('header');
-  const hamburger = document.querySelector('.hamburger');
-  const mobileMenu = document.querySelector('.mobile-menu');
+const hamburger = document.querySelector('.hamburger');
+const mobileMenu = document.querySelector('.mobile-menu');
 
   function updateHeaderBackground() {
     if (window.scrollY > 50 || header.matches(':hover') || hamburger.classList.contains('active')) {
