@@ -141,6 +141,29 @@ nav.desktop-menu {
   }
 }
 
+nav ul li a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #007BFF;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  color: #000000; /* Blue color */
+  font-size: 1rem;
+  display: block;
+  padding: 10px 0;
+  transition: color 0.3s ease;
+}
+
+.mobile-menu a:hover {
+  color: #0056b3; /* Darker blue on hover */
+}
 /* Video section */
 .video-section {
   position: relative;

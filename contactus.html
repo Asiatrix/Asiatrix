@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | Asiatrix</title>
+  <link rel="icon" type="image/png" href="logo/favicon.png">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="footer.css" />
+  <script defer src="script.js"></script>
+  <script defer src="footer.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #eef2f3, #fefefe);
+      color: #333;
+    }
+
+    .contact-section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-section::before {
+      content: '';
+      position: absolute;
+      top: -10%;
+      left: -10%;
+      width: 150%;
+      height: 150%;
+      background: radial-gradient(circle at center, #007BFF22 0%, transparent 70%);
+      animation: floatBg 10s infinite linear;
+      z-index: 0;
+    }
+
+    @keyframes floatBg {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .contact-container {
+      z-index: 1;
+      background: white;
+      padding: 40px;
+      max-width: 600px;
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      animation: fadeInUp 1s ease forwards;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .contact-container h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #007BFF;
+      text-align: center;
+    }
+
+    .form-group {
+      position: relative;
+      margin-bottom: 25px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 14px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+
+    .form-group label {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      color: #888;
+      font-size: 0.95rem;
+      pointer-events: none;
+      background-color: white;
+      padding: 0 5px;
+      transition: 0.3s ease;
+    }
+
+    .form-group input:focus + label,
+    .form-group textarea:focus + label,
+    .form-group input:not(:placeholder-shown) + label,
+    .form-group textarea:not(:placeholder-shown) + label {
+      top: -10px;
+      font-size: 0.8rem;
+      color: #007BFF;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 14px;
+      background-color: #007BFF;
+      color: white;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #0056b3;
+    }
+
+    @media (max-width: 600px) {
+      .contact-container {
+        padding: 25px;
+      }
+
+      .contact-container h2 {
+        font-size: 1.6em;
+      }
+    }
+  </style>
+</head>
+<body>
+ 
+     <!-- HEADER -->
+  <header id="mainHeader" class="transparent">
+    <div class="container">
+    <div class="logo">
+    <img src="logo/logo.png" alt="Asiatrix Logo" />
+  </div>
+
+      <nav class="desktop-menu">
+        <ul>
+        <li>What we do</li>
+        <li><a href="aboutus.html">Who we are</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li>Enterprise</li>
+        </ul>
+      </nav>
+
+    <div class="login-icon">
+     <i class="far fa-user"></i>
+    </div>
+
+      <!-- Mobile Hamburger Menu -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li>What we do</li>
+        <li><a href="aboutus.html">Who we are</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li>Enterprise</li>
+      </ul>
+    </div>
+  </header>
+
+
+  <section class="contact-section">
+    <div class="contact-container">
+      <h2>Contact Us</h2>
+      <form id="contactForm">
+        <div class="form-group">
+          <input type="text" id="name" placeholder=" " required />
+          <label for="name">Your Name</label>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" placeholder=" " required />
+          <label for="email">Your Email</label>
+        </div>
+        <div class="form-group">
+          <input type="text" id="subject" placeholder=" " required />
+          <label for="subject">Subject</label>
+        </div>
+        <div class="form-group">
+          <textarea id="message" placeholder=" " required></textarea>
+          <label for="message">Your Message</label>
+        </div>
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+  
+  <!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <h2>Innovating Culture, Designing Futures</h2>
+      <div class="footer-links">
+        <ul>
+          <li>Preference Center</li>
+          <li>Careers</li>
+          <li>About Us</li>
+          <li>Contact Us</li>
+          <li>Locations</li>
+          <li>Sitemap</li>
+        </ul>
+        <ul>
+          <li>Privacy Statement</li>
+          <li>Terms & Conditions</li>
+          <li>Cookie Policy/Settings</li>
+          <li>Accessibility Statement</li>
+          <li>Legal</li>
+        </ul>
+      </div>
+      <p class="copyright">© 2025 Asiatrix. All Rights Reserved.</p>
+    </div>
+
+   
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Animate contact container on load
+      document.querySelector('.contact-container').style.opacity = 1;
+
+      // Simple form submission handling (demo purpose)
+      document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert("Thank you for contacting Asiatrix! We'll get back to you soon.");
+        this.reset();
+      });
+    });
+  </script>
+
+</body>
+</html>
