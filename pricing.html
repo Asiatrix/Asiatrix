@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Asiatrix | Pricing</title>
+  <link rel="icon" type="image/png" href="logo/favicon.png">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="footer.css" />
+  <script defer src="script.js"></script>
+  <script defer src="footer.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background: #f7f9fc;
+      padding: 40px 20px;
+      color: #333;
+    }
+
+    h1 {
+      margin-top: 60px;
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.5rem;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .pricing-card {
+      background: white;
+      padding: 30px 20px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .pricing-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .pricing-desc {
+      font-size: 0.95rem;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    .price-box {
+      position: absolute;
+      bottom: -100%;
+      left: 0;
+      width: 100%;
+      background-color: #007BFF;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+      transition: bottom 0.4s ease;
+    }
+
+    .pricing-card.active .price-box {
+      bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+      .pricing-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pricing-card {
+        border-radius: 15px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+    }
+    
+  </style>
+</head>
+<body>
+
+
+     <!-- HEADER -->
+  <header id="mainHeader" class="transparent">
+    <div class="container">
+<div class="logo">
+  <a href="index.html">
+    <img src="logo/logo.png" alt="Asiatrix Logo" />
+  </a>
+</div>
+      <nav class="desktop-menu">
+        <ul>
+        <li>What we do</li>
+        <li><a href="aboutus.html">Who we are</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li>Enterprise</li>
+        </ul>
+      </nav>
+
+    <div class="login-icon">
+     <i class="far fa-user"></i>
+    </div>
+
+      <!-- Mobile Hamburger Menu -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li>What we do</li>
+        <li><a href="aboutus.html">Who we are</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li>Enterprise</li>
+      </ul>
+    </div>
+  </header>
+
+
+  <h1>Our Pricing Plans</h1>
+
+  <div class="pricing-grid">
+    <!-- Example Card -->
+    <div class="pricing-card" onclick="togglePrice(this)">
+      <div class="pricing-title">Starter Plan</div>
+      <div class="pricing-desc">Perfect for personal projects and small teams.</div>
+      <div class="price-box">$19/month</div>
+    </div>
+
+    <div class="pricing-card" onclick="togglePrice(this)">
+      <div class="pricing-title">Basic Plan</div>
+      <div class="pricing-desc">For growing teams and regular use.</div>
+      <div class="price-box">$29/month</div>
+    </div>
+
+    <div class="pricing-card" onclick="togglePrice(this)">
+      <div class="pricing-title">Professional</div>
+      <div class="pricing-desc">Ideal for businesses with large needs.</div>
+      <div class="price-box">$49/month</div>
+    </div>
+
+    <div class="pricing-card" onclick="togglePrice(this)">
+      <div class="pricing-title">Enterprise</div>
+      <div class="pricing-desc">Customized solutions for enterprises.</div>
+      <div class="price-box">Contact Us</div>
+    </div>
+
+    <div class="pricing-card" onclick="togglePrice(this)">
+      <div class="pricing-title">Consulting</div>
+      <div class="pricing-desc">Expert guidance for your business.</div>
+      <div class="price-box">$99/hour</div>
+    </div>
+
+    <div class="pricing-card" onclick="togglePrice(this)">
+      <div class="pricing-title">Design Only</div>
+      <div class="pricing-desc">UI/UX services included.</div>
+      <div class="price-box">$399/project</div>
+    </div>
+
+    <div class="pricing-card" onclick="togglePrice(this)">
+      <div class="pricing-title">Monthly Maintenance</div>
+      <div class="pricing-desc">Keep everything running smoothly.</div>
+      <div class="price-box">$79/month</div>
+    </div>
+
+    <div class="pricing-card" onclick="togglePrice(this)">
+      <div class="pricing-title">Custom Build</div>
+      <div class="pricing-desc">Tailored software & integrations.</div>
+      <div class="price-box">Starts at $999</div>
+    </div>
+  </div>
+
+  <script>
+    function togglePrice(card) {
+      card.classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>
