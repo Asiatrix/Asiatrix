@@ -296,3 +296,19 @@ nav ul li a:hover {
     max-width: none;
   }
 }
+.card-button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+  background-color: #333;
+}
+

@@ -78,3 +78,13 @@
   .bar-column span {
     font-size: 1.2rem;
   }
+ul li a {
+  text-decoration: none; /* Removes underline */
+  color: inherit; /* Inherits color from parent (keeps your design consistent) */
+  transition: color 0.3s ease;
+}
+
+ul li a:hover {
+  color: #007bff; /* Optional: blue on hover or any color you prefer */
+  text-decoration: underline; /* Optional: underline only on hover */
+}
