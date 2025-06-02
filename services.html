@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services | Asiatrix</title>
+  <link rel="icon" type="image/png" href="logo/favicon.png">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="footer.css" />
+  <script defer src="script.js"></script>
+  <script defer src="footer.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #eef2f3, #fefefe);
+      color: #333;
+    }
+
+    
+  </style>
+</head>
+<body>
+ 
+     <!-- HEADER -->
+  <header id="mainHeader" class="transparent">
+    <div class="container">
+<div class="logo">
+  <a href="index.html">
+    <img src="logo/logo.png" alt="Asiatrix Logo" />
+  </a>
+  </div>
+
+      <nav class="desktop-menu">
+        <ul>
+        <li>What we do</li>
+        <li><a href="aboutus.html">Who we are</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li>Enterprise</li>
+        </ul>
+      </nav>
+
+    <div class="login-icon">
+     <i class="far fa-user"></i>
+    </div>
+
+      <!-- Mobile Hamburger Menu -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li>What we do</li>
+        <li><a href="aboutus.html">Who we are</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li>Enterprise</li>
+      </ul>
+    </div>
+  </header>
+
+
+  <section class="contact-section">
+    <div class="contact-container">
+      <h2>Contact Us</h2>
+      <form id="contactForm">
+        <div class="form-group">
+          <input type="text" id="name" placeholder=" " required />
+          <label for="name">Your Name</label>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" placeholder=" " required />
+          <label for="email">Your Email</label>
+        </div>
+        <div class="form-group">
+          <input type="text" id="subject" placeholder=" " required />
+          <label for="subject">Subject</label>
+        </div>
+        <div class="form-group">
+          <textarea id="message" placeholder=" " required></textarea>
+          <label for="message">Your Message</label>
+        </div>
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </div>
+      <div class="contact-email">
+  Or email us directly at  
+  <a href="mailto:info@asiatrix.com">hello@asiatrix.com</a>
+</div>
+  </section>
+
+  <!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <h2>Innovating Culture, Designing Futures</h2>
+      <div class="footer-links">
+        <ul>
+          <li>Preference Center</li>
+          <li>Careers</li>
+          <li>About Us</li>
+          <li>Contact Us</li>
+          <li>Locations</li>
+          <li>Sitemap</li>
+        </ul>
+        <ul>
+          <li>Privacy Statement</li>
+          <li>Terms & Conditions</li>
+          <li>Cookie Policy/Settings</li>
+          <li>Accessibility Statement</li>
+          <li>Legal</li>
+        </ul>
+      </div>
+      <p class="copyright">© 2025 Asiatrix. All Rights Reserved.</p>
+    </div>
+
+   
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Animate contact container on load
+      document.querySelector('.contact-container').style.opacity = 1;
+
+      // Simple form submission handling (demo purpose)
+      document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert("Thank you for contacting Asiatrix! We'll get back to you soon.");
+        this.reset();
+      });
+    });
+  </script>
+
+</body>
+</html>
