@@ -3,7 +3,13 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Asiatrix - Content Writing Service</title>
+<title>Asiatrix - Content Service</title>
+<link rel="icon" type="image/png" href="logo/favicon.png">
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="footer.css" />
+<script defer src="script.js"></script>
+<script defer src="footer.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
   /* Reset & base */
   *, *::before, *::after {
@@ -39,6 +45,21 @@
     display: block;
   }
 
+      /* Header */
+  header {
+  width: 100%;
+  position: relative;
+  z-index: 1000;
+  background-color: white; /* or transparent based on your setup */
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  }
+
+
   /* Container */
   .container {
     max-width: 1100px;
@@ -47,49 +68,6 @@
     position: relative;
     z-index: 1;
   }
-
-  /* Header */
-  header {
-    background-color: #ffffff;
-    padding: 80px 24px 60px;
-    text-align: center;
-    box-shadow: 0 2px 6px rgb(0 0 0 / 0.05);
-    border-radius: 8px;
-    margin: 32px 24px 48px;
-  }
-  header h1 {
-    font-weight: 700;
-    font-size: 2.75rem;
-    margin-bottom: 12px;
-    letter-spacing: 0.03em;
-    color: #34495e;
-  }
-  header p {
-    font-weight: 400;
-    font-size: 1.125rem;
-    color: #6c7a89;
-    margin-bottom: 32px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  header button {
-    background-color: #2980b9;
-    color: #fff;
-    font-weight: 600;
-    font-size: 1rem;
-    padding: 14px 48px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.25s ease;
-  }
-  header button:hover,
-  header button:focus {
-    background-color: #216899;
-    outline: none;
-  }
-
   /* Features Section */
   section.features {
     background-color: #ffffff;
@@ -239,19 +217,6 @@
     background-color: #dfefff;
     outline: none;
   }
-
-  /* Footer */
-  footer {
-    text-align: center;
-    font-size: 0.875rem;
-    padding: 16px 24px;
-    color: #95a5a6;
-    border-top: 1px solid #ecf0f1;
-    position: relative;
-    z-index: 1;
-    background-color: #fff;
-  }
-
   /* Accessibility */
   .feature-card:focus-within {
     outline: 3px solid #2980b9;
@@ -283,13 +248,45 @@
 </head>
 <body>
 
-<header>
-  <div class="container">
-    <h1>Love Words That Sell</h1>
-    <p>Expert Content Writing Crafted to Make Your Brand Shine Brilliantly Online</p>
-    <button class="btn-primary" onclick="scrollToFeatures()">Discover Our Services</button>
-  </div>
-</header>
+  <header id="mainHeader" class="transparent">
+    <div class="container">
+<div class="logo">
+  <a href="index.html">
+    <img src="logo/logo.png" alt="Asiatrix Logo" />
+  </a>
+</div>
+      <nav class="desktop-menu">
+        <ul>
+        <li><a href="services.html">What we do</a></li>
+        <li><a href="aboutus.html">Who we are</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="enterprises.html">Enterprise</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+        </ul>
+      </nav>
+
+    <div class="login-icon">
+     <i class="far fa-user"></i>
+    </div>
+
+      <!-- Mobile Hamburger Menu -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="services.html">What we do</a></li>
+        <li><a href="aboutus.html">Who we are</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="enterprises.html">Enterprise</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
 
 <section class="features" id="features">
   <div class="container features-grid">
@@ -340,9 +337,30 @@
   <button onclick="contactUs()">Get Your Custom Quote</button>
 </section>
 
-<footer>
-  &copy; 2024 Asiatrix. All rights reserved.
-</footer>
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <h2>Innovating Culture, Designing Futures</h2>
+      <div class="footer-links">
+<ul>
+  <li><a href="notfound.html">Preference Center</a></li>
+  <li><a href="notfound.html">Careers</a></li>
+  <li><a href="notfound.html">About Us</a></li>
+  <li><a href="notfound.html">Contact Us</a></li>
+  <li><a href="notfound.html">Locations</a></li>
+  <li><a href="notfound.html">Sitemap</a></li>
+</ul>
+<ul>
+  <li><a href="notfound.html">Privacy Statement</a></li>
+  <li><a href="notfound.html">Terms & Conditions</a></li>
+  <li><a href="notfound.html">Cookie Policy/Settings</a></li>
+  <li><a href="notfound.html">Accessibility Statement</a></li>
+  <li><a href="notfound.html">Legal</a></li>
+</ul>
+      </div>
+      <p class="copyright">© 2025 Asiatrix. All Rights Reserved.</p>
+    </div>
 
 <script>
   function scrollToFeatures() {
