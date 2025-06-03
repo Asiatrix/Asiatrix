@@ -59,45 +59,57 @@
     }
 
     .services {
-      max-width: 1200px;
-      margin: 60px auto;
-      padding: 0 20px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-      gap: 30px;
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 30px;
     }
 
     .service-box {
-      background: white;
-      padding: 30px 20px;
-      border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      position: relative;
-      overflow: hidden;
+  background: white;
+  padding: 30px 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
     }
 
-    .service-box:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 16px 30px rgba(0, 0, 0, 0.15);
-    }
+.service-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.15);
+}
 
-    .service-box i {
-      font-size: 2.5rem;
-      color: #007BFF;
-      margin-bottom: 20px;
-    }
+    
+.service-box i {
+  font-size: 2.5rem;
+  color: #007BFF;
+  margin-bottom: 20px;
+}
 
-    .service-box h3 {
-      font-size: 1.3rem;
-      margin-bottom: 10px;
-      color: #222;
-    }
+.service-box h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #222;
+}
 
     .service-box p {
-      font-size: 0.95rem;
-      color: #555;
-      line-height: 1.6;
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+    }
+
+    .service-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.3s ease;
+    }
+
+    .service-link:hover {
+    transform: scale(1.02);
     }
 
     @media (max-width: 600px) {
@@ -161,43 +173,97 @@
   </section>
 
   <!-- SERVICES SECTION -->
+   
   <section class="services">
+  <a href="contentwriting.html" class="service-link">
+    <div class="service-box" data-scroll>
+      <i class="fas fa-pen-nib"></i>
+      <h3>Content Writing</h3>
+      <p>High-quality, engaging content tailored to your brand's tone—blogs, articles, and web copywriting.</p>
+    </div>
+  </a>
+
+  <a href="brand-development.html" class="service-link">
+    <div class="service-box" data-scroll>
+      <i class="fas fa-lightbulb"></i>
+      <h3>Brand Development</h3>
+      <p>Build a powerful brand identity that connects with your audience and drives growth.</p>
+    </div>
+  </a>
+
+  <a href="website-development.html" class="service-link">
     <div class="service-box" data-scroll>
       <i class="fas fa-laptop-code"></i>
-      <h3>Web Development</h3>
-      <p>Custom websites and platforms tailored to your needs using modern frameworks.</p>
+      <h3>Website Development</h3>
+      <p>Responsive, scalable websites using modern frameworks and user-centric design.</p>
     </div>
+  </a>
 
+  <a href="logo-designing.html" class="service-link">
+    <div class="service-box" data-scroll>
+      <i class="fas fa-feather-alt"></i>
+      <h3>Logo Designing</h3>
+      <p>Memorable, timeless logos that define your brand’s identity and make a bold statement.</p>
+    </div>
+  </a>
+
+  <a href="ui-ux.html" class="service-link">
     <div class="service-box" data-scroll>
       <i class="fas fa-paint-brush"></i>
-      <h3>UI/UX Design</h3>
-      <p>Interactive, user-centered design that enhances user experience and engagement.</p>
+      <h3>UI/UX</h3>
+      <p>Intuitive interfaces and seamless experiences that engage and convert users effectively.</p>
     </div>
+  </a>
 
-    <div class="service-box" data-scroll>
-      <i class="fas fa-bullhorn"></i>
-      <h3>Digital Marketing</h3>
-      <p>Campaigns and strategies that drive traffic, engagement, and conversions.</p>
-    </div>
-
+  <a href="automatic-solutions.html" class="service-link">
     <div class="service-box" data-scroll>
       <i class="fas fa-cogs"></i>
-      <h3>Automation Solutions</h3>
-      <p>Process automation using AI, APIs, and scripts to save time and resources.</p>
+      <h3>Automatic Solutions</h3>
+      <p>Streamline operations with AI-driven automation, scripts, and API integrations.</p>
     </div>
+  </a>
 
+  <a href="cloud-services.html" class="service-link">
     <div class="service-box" data-scroll>
       <i class="fas fa-cloud"></i>
       <h3>Cloud Services</h3>
-      <p>Secure, scalable cloud deployments and migrations using AWS, GCP, Azure.</p>
+      <p>Deploy secure and scalable infrastructure on AWS, Azure, or GCP with ease.</p>
     </div>
+  </a>
 
+  <a href="mobile-apps.html" class="service-link">
     <div class="service-box" data-scroll>
       <i class="fas fa-mobile-alt"></i>
       <h3>Mobile Apps</h3>
-      <p>Native & hybrid mobile apps designed for iOS and Android with seamless UX.</p>
+      <p>Innovative iOS and Android apps with robust backend and elegant design.</p>
     </div>
-  </section>
+  </a>
+
+  <a href="gem-jewelry-solutions.html" class="service-link">
+    <div class="service-box" data-scroll>
+      <i class="fas fa-gem"></i>
+      <h3>Gem & Jewelry Solutions</h3>
+      <p>Digital solutions tailored for the gem and jewelry industry—from inventory to e-commerce.</p>
+    </div>
+  </a>
+
+  <a href="brand-registration.html" class="service-link">
+    <div class="service-box" data-scroll>
+      <i class="fas fa-certificate"></i>
+      <h3>Brand Registration</h3>
+      <p>Protect your brand identity with complete trademark and registration services.</p>
+    </div>
+  </a>
+
+  <a href="startups.html" class="service-link">
+    <div class="service-box" data-scroll>
+      <i class="fas fa-rocket"></i>
+      <h3>Startups</h3>
+      <p>From idea to execution—branding, tech, and go-to-market strategies for new ventures.</p>
+    </div>
+  </a>
+</section>
+
 
   <!-- FOOTER -->
   <footer class="site-footer">

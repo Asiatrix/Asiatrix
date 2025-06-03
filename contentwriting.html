@@ -11,14 +11,27 @@
   }
   body {
     margin:0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f7fafd;
-    color: #222;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #ffffff;
+    color: #2c3e50;
     line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
   }
+
   a {
-    color: inherit;
+    color: #2980b9;
     text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover,
+  a:focus {
+    color: #1c5980;
+    outline: none;
   }
   img {
     max-width: 100%;
@@ -28,225 +41,242 @@
 
   /* Container */
   .container {
-    max-width: 1140px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 24px;
+    position: relative;
+    z-index: 1;
   }
 
-  /* Header Section */
+  /* Header */
   header {
-    background: linear-gradient(135deg, #0099ff 0%, #6610f2 100%);
-    color: #fff;
-    padding: 80px 20px 60px;
+    background-color: #ffffff;
+    padding: 80px 24px 60px;
     text-align: center;
-    position: relative;
-    overflow: hidden;
+    box-shadow: 0 2px 6px rgb(0 0 0 / 0.05);
+    border-radius: 8px;
+    margin: 32px 24px 48px;
   }
   header h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-    letter-spacing: 3px;
-    font-weight: 800;
-    text-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    font-weight: 700;
+    font-size: 2.75rem;
+    margin-bottom: 12px;
+    letter-spacing: 0.03em;
+    color: #34495e;
   }
   header p {
-    font-size: 1.3rem;
-    max-width: 700px;
-    margin: 0 auto 1.5rem;
-    font-weight: 500;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    font-weight: 400;
+    font-size: 1.125rem;
+    color: #6c7a89;
+    margin-bottom: 32px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
   }
-  header .btn-primary {
-    background: #fff;
-    color: #6610f2;
-    font-weight: 700;
-    padding: 14px 44px;
-    text-transform: uppercase;
-    border-radius: 50px;
-    display: inline-block;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-    transition: background 0.3s ease, color 0.3s ease;
-    cursor: pointer;
-  }
-  header .btn-primary:hover {
-    background: #6610f2;
+  header button {
+    background-color: #2980b9;
     color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 14px 48px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
   }
-  /* Decorative shapes */
-  header::before, header::after {
-    content: '';
-    position: absolute;
-    border-radius: 50%;
-    opacity: 0.2;
-    filter: blur(40px);
-    z-index: 0;
-  }
-  header::before {
-    width: 200px; height: 200px;
-    top: 10px; left: 30px;
-    background: #ff00ff;
-  }
-  header::after {
-    width: 280px; height: 280px;
-    bottom: -40px; right: 40px;
-    background: #00ffff;
+  header button:hover,
+  header button:focus {
+    background-color: #216899;
+    outline: none;
   }
 
-  /* Features section */
+  /* Features Section */
   section.features {
-    padding: 60px 20px 80px;
-    background: #fff;
+    background-color: #ffffff;
+    padding: 60px 24px 80px;
+    border-radius: 8px;
+    margin: 0 24px 72px;
+    box-shadow: 0 3px 15px rgb(0 0 0 / 0.05);
   }
-  section.features .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 30px;
+  section.features h2 {
+    text-align: center;
+    color: #2c3e50;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 56px;
+  }
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 36px;
+    max-width: 900px;
+    margin: 0 auto;
   }
   .feature-card {
-    flex: 1 1 280px;
-    background: #f0f5ff;
-    border-radius: 16px;
-    padding: 30px 25px 40px;
-    box-shadow: 0 8px 16px rgba(102, 16, 242, 0.12);
+    background: #f7f9fc;
+    border-radius: 8px;
+    padding: 28px 24px 40px;
+    box-shadow: 0 1px 4px rgb(0 0 0 / 0.05);
+    display: flex;
+    flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: default;
   }
-  .feature-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 25px 35px rgba(102, 16, 242, 0.35);
+  .feature-card:hover,
+  .feature-card:focus-within {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 18px rgb(41 128 185 / 0.25);
+    outline: none;
+  }
+  .feature-icon {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: #2980b9;
+    flex-shrink: 0;
   }
   .feature-card h3 {
-    color: #6610f2;
-    font-size: 1.6rem;
+    color: #34495e;
+    font-size: 1.4rem;
     margin-bottom: 12px;
   }
   .feature-card p {
     font-size: 1rem;
-    color: #4a4a4a;
+    color: #627d98;
     line-height: 1.5;
     user-select: none;
-  }
-  .feature-icon {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    color: #6610f2;
+    flex-grow: 1;
   }
 
   /* Testimonials */
   section.testimonials {
-    background: linear-gradient(135deg, #6610f2, #0099ff);
-    padding: 60px 20px 80px;
-    color: #fff;
+    background-color: #f5f8fb;
+    padding: 70px 24px 90px;
+    border-radius: 8px;
+    margin: 0 24px 72px;
+    box-shadow: 0 3px 15px rgb(0 0 0 / 0.05);
   }
   section.testimonials h2 {
     text-align: center;
-    margin-bottom: 40px;
-    font-weight: 800;
-    font-size: 2.75rem;
-    letter-spacing: 1.5px;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 56px;
   }
-  .testimonial-slider {
-    display: flex;
-    gap: 30px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    padding-bottom: 20px;
+  .testimonial-list {
+    max-width: 850px;
+    margin: 0 auto;
+    display: grid;
+    gap: 26px;
   }
   .testimonial-card {
-    flex: 0 0 320px;
-    background: rgba(255, 255, 255, 0.12);
-    border-radius: 18px;
-    padding: 28px 24px 36px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    user-select: none;
+    background-color: white;
+    padding: 30px 26px;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgb(0 0 0 / 0.08);
+    font-style: italic;
+    color: #566573;
     position: relative;
   }
   .testimonial-card::before {
     content: "“";
-    font-size: 5rem;
-    color: rgba(255,255,255,0.3);
+    font-size: 72px;
+    font-weight: 700;
+    color: #2980b9;
     position: absolute;
-    top: 8px;
-    left: 20px;
-    font-weight: 900;
-    font-family: serif;
+    top: 12px;
+    left: 18px;
+    line-height: 1;
   }
   .testimonial-text {
-    font-style: italic;
-    font-size: 1.1rem;
-    margin-bottom: 18px;
-    line-height: 1.6;
+    margin-left: 48px;
+    margin-bottom: 16px;
+    font-size: 1.125rem;
   }
   .testimonial-author {
     font-weight: 700;
+    font-style: normal;
+    color: #34495e;
     font-size: 1rem;
-    opacity: 0.95;
   }
 
   /* Call to Action */
   section.cta {
-    background: #6610f2;
+    background-color: #2980b9;
     color: #fff;
     text-align: center;
-    padding: 60px 20px;
-    border-radius: 0 0 40px 40px;
+    padding: 72px 24px 72px;
+    border-radius: 8px;
+    margin: 0 24px 40px;
+    box-shadow: 0 10px 30px rgb(0 0 0 / 0.12);
   }
   section.cta h2 {
-    font-size: 2.8rem;
-    font-weight: 800;
-    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    letter-spacing: 0.02em;
   }
   section.cta p {
-    font-size: 1.3rem;
-    margin-bottom: 30px;
-    font-weight: 500;
+    font-size: 1.125rem;
+    font-weight: 400;
+    margin-bottom: 36px;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
   }
   section.cta button {
-    font-size: 1.2rem;
-    padding: 14px 48px;
-    background: #00e3ff;
-    border: none;
-    border-radius: 50px;
-    color: #6610f2;
+    background-color: #fff;
+    color: #2980b9;
     font-weight: 700;
+    font-size: 1.125rem;
+    padding: 16px 56px;
+    border-radius: 6px;
+    border: none;
     cursor: pointer;
-    box-shadow: 0 18px 35px rgba(0,227,255,0.55);
-    transition: background 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 8px 20px rgb(255 255 255 / 0.35);
   }
-  section.cta button:hover {
-    background: #0ab7d2;
-    color: white;
+  section.cta button:hover,
+  section.cta button:focus {
+    background-color: #dfefff;
+    outline: none;
   }
 
   /* Footer */
   footer {
     text-align: center;
-    padding: 20px 20px;
-    font-size: 0.9rem;
-    color: #666;
+    font-size: 0.875rem;
+    padding: 16px 24px;
+    color: #95a5a6;
+    border-top: 1px solid #ecf0f1;
+    position: relative;
+    z-index: 1;
+    background-color: #fff;
+  }
+
+  /* Accessibility */
+  .feature-card:focus-within {
+    outline: 3px solid #2980b9;
+  }
+  .testimonial-card:focus {
+    outline: 3px solid #2980b9;
   }
 
   /* Responsive */
   @media (max-width: 768px) {
     header h1 {
-      font-size: 2.4rem;
+      font-size: 2rem;
     }
     header p {
-      font-size: 1.1rem;
+      font-size: 1rem;
     }
-    .feature-card {
-      flex: 1 1 100%;
-    }
-    section.features .container {
-      flex-direction: column;
-      gap: 24px;
-    }
+    section.features h2,
     section.testimonials h2 {
-      font-size: 2rem;
+      font-size: 1.7rem;
     }
     section.cta h2 {
       font-size: 2rem;
+    }
+    section.cta p {
+      font-size: 1rem;
     }
   }
 </style>
@@ -262,24 +292,24 @@
 </header>
 
 <section class="features" id="features">
-  <div class="container">
-    <article class="feature-card">
-      <div class="feature-icon">📝</div>
+  <div class="container features-grid">
+    <article class="feature-card" tabindex="0">
+      <div class="feature-icon" aria-hidden="true">📝</div>
       <h3>Powerful Blog Posts</h3>
       <p>Engage your readers with well-researched, SEO-friendly blog content that drives traffic and builds authority.</p>
     </article>
-    <article class="feature-card">
-      <div class="feature-icon">📄</div>
+    <article class="feature-card" tabindex="0">
+      <div class="feature-icon" aria-hidden="true">📄</div>
       <h3>Compelling Website Copy</h3>
       <p>Let your website talk - clear, concise, and persuasive copy that turns visitors into loyal customers.</p>
     </article>
-    <article class="feature-card">
-      <div class="feature-icon">🎯</div>
+    <article class="feature-card" tabindex="0">
+      <div class="feature-icon" aria-hidden="true">🎯</div>
       <h3>Targeted Marketing Content</h3>
       <p>Create impactful newsletters, email sequences, and ads that convert potential leads and build lasting relationships.</p>
     </article>
-    <article class="feature-card">
-      <div class="feature-icon">🎨</div>
+    <article class="feature-card" tabindex="0">
+      <div class="feature-icon" aria-hidden="true">🎨</div>
       <h3>Creative Storytelling</h3>
       <p>Tell your brand story with flair and creativity, captivating your audience and differentiating you from competitors.</p>
     </article>
@@ -288,20 +318,20 @@
 
 <section class="testimonials">
   <h2>People Love What We Write</h2>
-  <div class="testimonial-slider" aria-label="Client testimonials">
-    <article class="testimonial-card" tabindex="0">
+  <ul class="testimonial-list" aria-label="Client testimonials">
+    <li class="testimonial-card" tabindex="0">
       <p class="testimonial-text">"Asiatrix transformed our website content. Their words turned casual visitors into loyal customers and boosted our conversion rates!"</p>
       <p class="testimonial-author">– Maya L., Startup Founder</p>
-    </article>
-    <article class="testimonial-card" tabindex="0">
+    </li>
+    <li class="testimonial-card" tabindex="0">
       <p class="testimonial-text">"Professional, timely, and creative. Their content writing service is a game-changer in building our brand's voice."</p>
       <p class="testimonial-author">– Daniel K., Marketing Manager</p>
-    </article>
-    <article class="testimonial-card" tabindex="0">
+    </li>
+    <li class="testimonial-card" tabindex="0">
       <p class="testimonial-text">"The blog posts are informative yet engaging. Asiatrix's writing has made our SEO results soar!"</p>
       <p class="testimonial-author">– Priya S., Content Strategist</p>
-    </article>
-  </div>
+    </li>
+  </ul>
 </section>
 
 <section class="cta">
@@ -326,4 +356,3 @@
 
 </body>
 </html>
-
