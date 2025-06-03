@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Asiatrix | Brand Development</title>
+  <link rel="icon" type="image/png" href="logo/favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f8fafc;
+      color: #1f2937;
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: 20px 40px;
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    .hero {
+      background: linear-gradient(120deg, #1e3a8a, #2563eb);
+      color: white;
+      text-align: center;
+      padding: 100px 20px 60px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto;
+      color: #dbeafe;
+    }
+
+    .section {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .section.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .text-box {
+      flex: 1 1 50%;
+    }
+
+    .text-box h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #111827;
+    }
+
+    .text-box p {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #374151;
+    }
+
+    .image-box {
+      flex: 1 1 50%;
+      text-align: center;
+    }
+
+    .image-box img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .highlight {
+      background: #dbeafe;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .highlight h3 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .highlight p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1rem;
+      color: #374151;
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .section {
+        flex-direction: column;
+      }
+
+      .section.reverse {
+        flex-direction: column;
+      }
+
+      .text-box, .image-box {
+        flex: 1 1 100%;
+      }
+
+      .hero h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="index.html">
+    <img src="logo/logo.png" alt="Asiatrix Logo">
+  </a>
+</header>
+
+<section class="hero">
+  <h1>Brand Development</h1>
+  <p>We craft powerful brand identities that leave a lasting impact—tailored to your vision and voice.</p>
+</section>
+
+<section class="section">
+  <div class="text-box">
+    <h2>Strategy First</h2>
+    <p>We begin by understanding your brand’s mission, values, and market positioning. Through deep research and discovery, we identify how your brand can stand out in a crowded marketplace while staying true to its essence.</p>
+  </div>
+  <div class="image-box">
+    <img src="https://images.unsplash.com/photo-1601933470928-c6f4ba6b5f1b" alt="Brand Strategy">
+  </div>
+</section>
+
+<section class="section reverse">
+  <div class="text-box">
+    <h2>Visual Identity Design</h2>
+    <p>Your brand’s visuals should be more than just a logo. We design color palettes, typography, imagery, and patterns that represent your story—creating a cohesive and memorable look across all platforms.</p>
+  </div>
+  <div class="image-box">
+    <img src="https://images.unsplash.com/photo-1605379399642-870262d3d051" alt="Visual Design">
+  </div>
+</section>
+
+<section class="section">
+  <div class="text-box">
+    <h2>Brand Voice & Messaging</h2>
+    <p>We define the tone and language your brand uses to communicate—ensuring consistency whether you're writing ads, social posts, or customer support replies. Your words become as recognizable as your visuals.</p>
+  </div>
+  <div class="image-box">
+    <img src="https://images.unsplash.com/photo-1615390889641-07ba6b273930" alt="Messaging Strategy">
+  </div>
+</section>
+
+<section class="highlight">
+  <h3>Let's Build a Brand the World Remembers</h3>
+  <p>From logo to launch, Asiatrix empowers businesses to become unforgettable. Let’s make your brand iconic.</p>
+</section>
+
+</body>
+</html>
