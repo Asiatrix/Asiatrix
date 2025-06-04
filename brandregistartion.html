@@ -4,8 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Asiatrix | Brand Registration</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="icon" type="image/png" href="logo/favicon.png">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="footer.css" />
+  <script defer src="script.js"></script>
+  <script defer src="footer.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     * {
       margin: 0;
@@ -19,14 +23,6 @@
       color: #333;
     }
 
-    header {
-      padding: 20px 40px;
-      background: #fff;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
 
     .container {
       display: flex;
@@ -97,13 +93,6 @@
       background: #162447;
     }
 
-    footer {
-      background: #162447;
-      color: #fff;
-      text-align: center;
-      padding: 30px 20px;
-    }
-
     @media (max-width: 600px) {
       .hero h1 {
         font-size: 2rem;
@@ -117,17 +106,43 @@
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header>
+  <header id="mainHeader" class="transparent">
     <div class="container">
-      <div class="logo">
-        <a href="index.html">
-          <img src="logo/logo.png" alt="Asiatrix Logo">
-        </a>
+<div class="logo">
+  <a href="index.html">
+    <img src="logo/logo.png" alt="Asiatrix Logo" />
+  </a>
+</div>
+      <nav class="desktop-menu">
+        <ul>
+        <li><a href="services.html">What we do</a></li>
+        <li><a href="aboutus.html">Who we are</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="enterprises.html">Enterprise</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+        </ul>
+      </nav>
+
+    <div class="login-icon">
+     <i class="far fa-user"></i>
+    </div>
+
+      <!-- Mobile Hamburger Menu -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
-      <div class="login-icon">
-        <a href="login.html"><i class="far fa-user fa-lg" style="color:#1f4068;"></i></a>
-      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="services.html">What we do</a></li>
+        <li><a href="aboutus.html">Who we are</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="enterprises.html">Enterprise</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+      </ul>
     </div>
   </header>
 
@@ -166,10 +181,32 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2025 Asiatrix. All Rights Reserved.</p>
-  </footer>
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <h2>Innovating Culture, Designing Futures</h2>
+      <div class="footer-links">
+<ul>
+  <li><a href="notfound.html">Preference Center</a></li>
+  <li><a href="notfound.html">Careers</a></li>
+  <li><a href="notfound.html">About Us</a></li>
+  <li><a href="notfound.html">Contact Us</a></li>
+  <li><a href="notfound.html">Locations</a></li>
+  <li><a href="notfound.html">Sitemap</a></li>
+</ul>
+<ul>
+  <li><a href="notfound.html">Privacy Statement</a></li>
+  <li><a href="notfound.html">Terms & Conditions</a></li>
+  <li><a href="notfound.html">Cookie Policy/Settings</a></li>
+  <li><a href="notfound.html">Accessibility Statement</a></li>
+  <li><a href="notfound.html">Legal</a></li>
+</ul>
+      </div>
+      <p class="copyright">© 2025 Asiatrix. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
