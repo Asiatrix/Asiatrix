@@ -1,251 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Asiatrix - Professional Website Development Service</title>
-<link rel="icon" type="image/png" href="logo/favicon.png">
-<link rel="stylesheet" href="styles.css" />
-<link rel="stylesheet" href="footer.css" />
-<script defer src="script.js"></script>
-<script defer src="footer.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<style>
-  /* Reset and base */
-  *, *::before, *::after {
-    box-sizing: border-box;
-  }
-  body {
-    margin: 0; 
-    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: #fefefe;
-    color: #2c3e50;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
-  a {
-    color: #2980b9;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  a:hover,
-  a:focus {
-    color: #1c5980;
-    outline: none;
-  }
-  img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Asiatrix | Web Development</title>
+  <link rel="icon" type="image/png" href="logo/favicon.png">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="footer.css" />
+  <script defer src="script.js"></script>
+  <script defer src="footer.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    /* Header */
-  header {
-  width: 100%;
-  position: relative;
-  z-index: 1000;
-  background-color: white; /* or transparent based on your setup */
-  padding: 20px 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 999;
-  }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+      color: #1a1a1a;
+    }
 
-  /* Container */
-  .container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 24px;
-  }
-  /* Features Section */
-  section.features {
-    background-color: #fff;
-    padding: 60px 24px 80px;
-  }
-  section.features h2 {
-    text-align: center;
-    color: #2c3e50;
-    font-weight: 700;
-    font-size: 2rem;
-    margin-bottom: 56px;
-  }
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-    gap: 36px;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-  .feature {
-    background: #f7f9fc;
-    border-radius: 8px;
-    padding: 28px 24px;
-    box-shadow: 0 1px 4px rgb(0 0 0 / 0.05);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  .feature:focus-within,
-  .feature:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 18px rgb(41 128 185 / 0.25);
-    outline: none;
-  }
-  .feature-icon {
-    margin-bottom: 16px;
-    font-size: 2.4rem;
-    color: #2980b9;
-    flex-shrink: 0;
-  }
-  .feature-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #34495e;
-    margin-bottom: 12px;
-  }
-  .feature-desc {
-    font-size: 1rem;
-    color: #627d98;
-    flex-grow: 1;
-  }
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-  /* Testimonials Section */
-  section.testimonials {
-    background-color: #f5f8fb;
-    padding: 70px 24px 90px;
-  }
-  section.testimonials h2 {
-    text-align: center;
-    font-weight: 700;
-    font-size: 2rem;
-    color: #2c3e50;
-    margin-bottom: 56px;
-  }
-  .testimonial-list {
-    max-width: 850px;
-    margin: 0 auto;
-    display: grid;
-    gap: 26px;
-  }
-  .testimonial {
-    background-color: white;
-    padding: 30px 26px;
-    border-radius: 8px;
-    box-shadow: 0 1px 4px rgb(0 0 0 / 0.08);
-    font-style: italic;
-    color: #566573;
-    position: relative;
-  }
-  .testimonial::before {
-    content: "“";
-    font-size: 72px;
-    font-weight: 700;
-    color: #2980b9;
-    position: absolute;
-    top: 12px;
-    left: 18px;
-    line-height: 1;
-  }
-  .testimonial-text {
-    margin-left: 48px;
-    margin-bottom: 16px;
-    font-size: 1.125rem;
-  }
-  .testimonial-author {
-    font-weight: 700;
-    font-style: normal;
-    color: #34495e;
-    font-size: 1rem;
-  }
+    .logo img {
+      height: 40px;
+    }
 
-  /* Call-To-Action Section */
-  section.cta {
-    background-color: #2980b9;
-    color: #fff;
-    text-align: center;
-    padding: 72px 24px 72px;
-    border-radius: 0 0 4px 4px;
-  }
-  section.cta h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 16px;
-    letter-spacing: 0.02em;
-  }
-  section.cta p {
-    font-size: 1.125rem;
-    font-weight: 400;
-    margin-bottom: 36px;
-    max-width: 640px;
-    margin-left: auto;
-    margin-right: auto;
-    color: #dbe9f7;
-  }
-  section.cta button {
-    background-color: #fff;
-    color: #2980b9;
-    font-weight: 700;
-    font-size: 1.125rem;
-    padding: 16px 56px;
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 8px 20px rgb(255 255 255 / 0.35);
-  }
-  section.cta button:hover,
-  section.cta button:focus {
-    background-color: #dfefff;
-    outline: none;
-  }
+    .login-icon a {
+      color: #007acc;
+      font-size: 1.2rem;
+    }
 
-  /* Footer */
-  footer {
-    text-align: center;
-    font-size: 0.875rem;
-    padding: 16px 24px;
-    color: #95a5a6;
-    border-top: 1px solid #ecf0f1;
-  }
+    .hero {
+      background: linear-gradient(to right, #004d99, #00bfff);
+      color: white;
+      text-align: center;
+      padding: 100px 20px 60px;
+    }
 
-  /* Accessibility */
-  .feature:focus-within {
-    outline: 3px solid #2980b9;
-  }
-  .testimonial:focus {
-    outline: 3px solid #2980b9;
-  }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
 
-  /* Responsive */
-  @media (max-width: 768px) {
-    header h1 {
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .content {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .section {
+      margin-bottom: 60px;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.7s ease-out;
+    }
+
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section h2 {
       font-size: 2rem;
+      color: #007acc;
+      margin-bottom: 20px;
     }
-    header p {
-      font-size: 1rem;
+
+    .section p {
+      font-size: 1.05rem;
+      color: #444;
     }
-    section.features h2,
-    section.testimonials h2 {
-      font-size: 1.7rem;
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
     }
-    section.cta h2 {
+
+    .feature-box {
+      background: white;
+      border-radius: 15px;
+      padding: 25px;
+      border: 1px solid #e0e0e0;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+      transition: transform 0.3s ease;
+    }
+
+    .feature-box:hover {
+      transform: translateY(-6px);
+    }
+
+    .feature-box i {
       font-size: 2rem;
+      color: #007acc;
+      margin-bottom: 10px;
     }
-    section.cta p {
-      font-size: 1rem;
+
+    .feature-box h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
     }
-  }
-</style>
+
+    .cta {
+      text-align: center;
+      margin: 70px 0;
+    }
+
+    .cta a {
+      text-decoration: none;
+      background: #007acc;
+      color: white;
+      padding: 15px 30px;
+      font-size: 1.1rem;
+      border-radius: 30px;
+      transition: background 0.3s ease;
+    }
+
+    .cta a:hover {
+      background: #005b9a;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .section h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
- <!-- HEADER -->
   <header id="mainHeader" class="transparent">
     <div class="container">
 <div class="logo">
@@ -286,57 +188,61 @@
     </div>
   </header>
 
-<section class="features" id="features" aria-label="Website development features">
-  <h2>Our Expertise</h2>
-  <div class="features-grid">
-    <article class="feature" tabindex="0" aria-labelledby="feature1-title">
-      <div class="feature-icon" aria-hidden="true">💻</div>
-      <h3 class="feature-title" id="feature1-title">Custom Web Solutions</h3>
-      <p class="feature-desc">Building personalized websites crafted to reflect your brand identity and business goals.</p>
-    </article>
-    <article class="feature" tabindex="0" aria-labelledby="feature2-title">
-      <div class="feature-icon" aria-hidden="true">📱</div>
-      <h3 class="feature-title" id="feature2-title">Responsive Design</h3>
-      <p class="feature-desc">Ensuring optimal user experience on any device, from desktops to smartphones.</p>
-    </article>
-    <article class="feature" tabindex="0" aria-labelledby="feature3-title">
-      <div class="feature-icon" aria-hidden="true">⚡</div>
-      <h3 class="feature-title" id="feature3-title">Performance Optimization</h3>
-      <p class="feature-desc">Fast load times and efficient coding to keep your visitors engaged and improve SEO.</p>
-    </article>
-    <article class="feature" tabindex="0" aria-labelledby="feature4-title">
-      <div class="feature-icon" aria-hidden="true">🔐</div>
-      <h3 class="feature-title" id="feature4-title">Security & Maintenance</h3>
-      <p class="feature-desc">Keeping your website secure with proactive monitoring, updates, and backups.</p>
-    </article>
-  </div>
-</section>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <h1>Web Development Services</h1>
+    <p>Custom-coded, beautifully designed, and built for performance — we build websites that work.</p>
+  </section>
 
-<section class="testimonials" aria-label="Client testimonials">
-  <h2>What Our Clients Say</h2>
-  <ul class="testimonial-list">
-    <li class="testimonial" tabindex="0">
-      <p class="testimonial-text">"The Asiatrix team exceeded our expectations. The professionalism and attention to detail in building our platform was outstanding."</p>
-      <p class="testimonial-author">– Jonathan M., CTO</p>
-    </li>
-    <li class="testimonial" tabindex="0">
-      <p class="testimonial-text">"Reliable, timely, and expert developers. Our new website is beautiful, fast, and loved by our customers."</p>
-      <p class="testimonial-author">– Rachel S., Marketing Director</p>
-    </li>
-    <li class="testimonial" tabindex="0">
-      <p class="testimonial-text">"Asiatrix’s ongoing support and maintenance keep our site up-to-date and secure, allowing us to focus on growing our business."</p>
-      <p class="testimonial-author">– Kevin P., Founder</p>
-    </li>
-  </ul>
-</section>
+  <!-- MAIN CONTENT -->
+  <section class="content">
+    <div class="section" data-scroll>
+      <h2>Built for Growth, Engineered to Perform</h2>
+      <p>At Asiatrix, we combine visual creativity with technical expertise to deliver fast, responsive, and high-converting websites. Whether you're launching a product, building a brand, or scaling your business — we’ve got your digital front door covered.</p>
+    </div>
 
-<section class="cta" aria-label="Contact call to action">
-  <h2>Ready to Build Your Future Online?</h2>
-  <p>Partner with Asiatrix for professional website development tailored to your needs.</p>
-  <button type="button" onclick="contactUs()">Get In Touch</button>
-</section>
+    <div class="section" data-scroll>
+      <h2>Our Web Development Services</h2>
+      <div class="feature-grid">
+        <div class="feature-box">
+          <i class="fas fa-code"></i>
+          <h3>Custom Web Apps</h3>
+          <p>Fully tailored applications built with the latest tech stacks to meet your unique goals.</p>
+        </div>
+        <div class="feature-box">
+          <i class="fas fa-laptop"></i>
+          <h3>Responsive Design</h3>
+          <p>Mobile-first websites that look stunning and function seamlessly on all screen sizes.</p>
+        </div>
+        <div class="feature-box">
+          <i class="fas fa-cogs"></i>
+          <h3>Backend Integration</h3>
+          <p>Powerful APIs and scalable backend systems built for performance and security.</p>
+        </div>
+        <div class="feature-box">
+          <i class="fas fa-lock"></i>
+          <h3>Security & Speed</h3>
+          <p>Optimized for blazing speed and top-tier security to enhance user trust and experience.</p>
+        </div>
+        <div class="feature-box">
+          <i class="fas fa-search"></i>
+          <h3>SEO-Friendly Structure</h3>
+          <p>Code optimized to help your site get discovered by search engines right from launch.</p>
+        </div>
+        <div class="feature-box">
+          <i class="fas fa-wrench"></i>
+          <h3>Maintenance & Support</h3>
+          <p>Reliable post-launch support with regular updates and improvements as needed.</p>
+        </div>
+      </div>
+    </div>
 
-<!-- FOOTER -->
+    <div class="section cta" data-scroll>
+      <a href="contactus.html">Start Your Website Project</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
 <footer class="site-footer">
   <div class="footer-content">
     <div class="footer-left">
@@ -360,16 +266,22 @@
       </div>
       <p class="copyright">© 2025 Asiatrix. All Rights Reserved.</p>
     </div>
+  </div>
+</footer>
 
-<script>
-  function scrollToFeatures() {
-    document.getElementById('features').scrollIntoView({ behavior: 'smooth' });
-  }
+  <!-- Scroll Animation -->
+  <script>
+    const scrollElements = document.querySelectorAll('[data-scroll]');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
 
-  function contactUs() {
-    alert('Thank you for your interest! Please contact us at contact@asiatrix.com to discuss your project.');
-  }
-</script>
+    scrollElements.forEach(el => observer.observe(el));
+  </script>
 
 </body>
 </html>

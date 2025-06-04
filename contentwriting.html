@@ -1,250 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Asiatrix - Content Service</title>
-<link rel="icon" type="image/png" href="logo/favicon.png">
-<link rel="stylesheet" href="styles.css" />
-<link rel="stylesheet" href="footer.css" />
-<script defer src="script.js"></script>
-<script defer src="footer.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<style>
-  /* Reset & base */
-  *, *::before, *::after {
-    box-sizing: border-box;
-  }
-  body {
-    margin:0;
-    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: #ffffff;
-    color: #2c3e50;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    position: relative;
-    min-height: 100vh;
-    overflow-x: hidden;
-  }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Asiatrix | Content Writing Services</title>
+  <link rel="icon" type="image/png" href="logo/favicon.png">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="footer.css" />
+  <script defer src="script.js"></script>
+  <script defer src="footer.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  a {
-    color: #2980b9;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  a:hover,
-  a:focus {
-    color: #1c5980;
-    outline: none;
-  }
-  img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #fafafa;
+      color: #1a1a1a;
+    }
 
-      /* Header */
-  header {
-  width: 100%;
-  position: relative;
-  z-index: 1000;
-  background-color: white; /* or transparent based on your setup */
-  padding: 20px 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 999;
-  }
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
+    .logo img {
+      height: 40px;
+    }
 
-  /* Container */
-  .container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 24px;
-    position: relative;
-    z-index: 1;
-  }
-  /* Features Section */
-  section.features {
-    background-color: #ffffff;
-    padding: 60px 24px 80px;
-    border-radius: 8px;
-    margin: 0 24px 72px;
-    box-shadow: 0 3px 15px rgb(0 0 0 / 0.05);
-  }
-  section.features h2 {
-    text-align: center;
-    color: #2c3e50;
-    font-weight: 700;
-    font-size: 2rem;
-    margin-bottom: 56px;
-  }
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-    gap: 36px;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-  .feature-card {
-    background: #f7f9fc;
-    border-radius: 8px;
-    padding: 28px 24px 40px;
-    box-shadow: 0 1px 4px rgb(0 0 0 / 0.05);
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  .feature-card:hover,
-  .feature-card:focus-within {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 18px rgb(41 128 185 / 0.25);
-    outline: none;
-  }
-  .feature-icon {
-    font-size: 2.8rem;
-    margin-bottom: 20px;
-    color: #2980b9;
-    flex-shrink: 0;
-  }
-  .feature-card h3 {
-    color: #34495e;
-    font-size: 1.4rem;
-    margin-bottom: 12px;
-  }
-  .feature-card p {
-    font-size: 1rem;
-    color: #627d98;
-    line-height: 1.5;
-    user-select: none;
-    flex-grow: 1;
-  }
+    .login-icon a {
+      color: #007acc;
+      font-size: 1.2rem;
+    }
 
-  /* Testimonials */
-  section.testimonials {
-    background-color: #f5f8fb;
-    padding: 70px 24px 90px;
-    border-radius: 8px;
-    margin: 0 24px 72px;
-    box-shadow: 0 3px 15px rgb(0 0 0 / 0.05);
-  }
-  section.testimonials h2 {
-    text-align: center;
-    font-weight: 700;
-    font-size: 2rem;
-    color: #2c3e50;
-    margin-bottom: 56px;
-  }
-  .testimonial-list {
-    max-width: 850px;
-    margin: 0 auto;
-    display: grid;
-    gap: 26px;
-  }
-  .testimonial-card {
-    background-color: white;
-    padding: 30px 26px;
-    border-radius: 8px;
-    box-shadow: 0 1px 4px rgb(0 0 0 / 0.08);
-    font-style: italic;
-    color: #566573;
-    position: relative;
-  }
-  .testimonial-card::before {
-    content: "“";
-    font-size: 72px;
-    font-weight: 700;
-    color: #2980b9;
-    position: absolute;
-    top: 12px;
-    left: 18px;
-    line-height: 1;
-  }
-  .testimonial-text {
-    margin-left: 48px;
-    margin-bottom: 16px;
-    font-size: 1.125rem;
-  }
-  .testimonial-author {
-    font-weight: 700;
-    font-style: normal;
-    color: #34495e;
-    font-size: 1rem;
-  }
+    .hero {
+      background: linear-gradient(to right, #007acc, #00c3ff);
+      color: white;
+      text-align: center;
+      padding: 90px 20px 60px;
+    }
 
-  /* Call to Action */
-  section.cta {
-    background-color: #2980b9;
-    color: #fff;
-    text-align: center;
-    padding: 72px 24px 72px;
-    border-radius: 8px;
-    margin: 0 24px 40px;
-    box-shadow: 0 10px 30px rgb(0 0 0 / 0.12);
-  }
-  section.cta h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 16px;
-    letter-spacing: 0.02em;
-  }
-  section.cta p {
-    font-size: 1.125rem;
-    font-weight: 400;
-    margin-bottom: 36px;
-    max-width: 640px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  section.cta button {
-    background-color: #fff;
-    color: #2980b9;
-    font-weight: 700;
-    font-size: 1.125rem;
-    padding: 16px 56px;
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 8px 20px rgb(255 255 255 / 0.35);
-  }
-  section.cta button:hover,
-  section.cta button:focus {
-    background-color: #dfefff;
-    outline: none;
-  }
-  /* Accessibility */
-  .feature-card:focus-within {
-    outline: 3px solid #2980b9;
-  }
-  .testimonial-card:focus {
-    outline: 3px solid #2980b9;
-  }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
 
-  /* Responsive */
-  @media (max-width: 768px) {
-    header h1 {
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .content {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .section {
+      margin-bottom: 60px;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.7s ease-out;
+    }
+
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section h2 {
       font-size: 2rem;
+      color: #007acc;
+      margin-bottom: 20px;
     }
-    header p {
-      font-size: 1rem;
+
+    .section p {
+      font-size: 1.05rem;
+      color: #444;
     }
-    section.features h2,
-    section.testimonials h2 {
-      font-size: 1.7rem;
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
     }
-    section.cta h2 {
+
+    .feature-box {
+      background: white;
+      border-radius: 15px;
+      padding: 25px;
+      border: 1px solid #e0e0e0;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+      transition: transform 0.3s ease;
+    }
+
+    .feature-box:hover {
+      transform: translateY(-6px);
+    }
+
+    .feature-box i {
       font-size: 2rem;
+      color: #00b2e2;
+      margin-bottom: 10px;
     }
-    section.cta p {
-      font-size: 1rem;
+
+    .feature-box h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
     }
-  }
-</style>
+
+    .cta {
+      text-align: center;
+      margin: 70px 0;
+    }
+
+    .cta a {
+      text-decoration: none;
+      background: #007acc;
+      color: white;
+      padding: 15px 30px;
+      font-size: 1.1rem;
+      border-radius: 30px;
+      transition: background 0.3s ease;
+    }
+
+    .cta a:hover {
+      background: #005c99;
+    }
+
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .section h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -288,54 +189,59 @@
     </div>
   </header>
 
-<section class="features" id="features">
-  <div class="container features-grid">
-    <article class="feature-card" tabindex="0">
-      <div class="feature-icon" aria-hidden="true">📝</div>
-      <h3>Powerful Blog Posts</h3>
-      <p>Engage your readers with well-researched, SEO-friendly blog content that drives traffic and builds authority.</p>
-    </article>
-    <article class="feature-card" tabindex="0">
-      <div class="feature-icon" aria-hidden="true">📄</div>
-      <h3>Compelling Website Copy</h3>
-      <p>Let your website talk - clear, concise, and persuasive copy that turns visitors into loyal customers.</p>
-    </article>
-    <article class="feature-card" tabindex="0">
-      <div class="feature-icon" aria-hidden="true">🎯</div>
-      <h3>Targeted Marketing Content</h3>
-      <p>Create impactful newsletters, email sequences, and ads that convert potential leads and build lasting relationships.</p>
-    </article>
-    <article class="feature-card" tabindex="0">
-      <div class="feature-icon" aria-hidden="true">🎨</div>
-      <h3>Creative Storytelling</h3>
-      <p>Tell your brand story with flair and creativity, captivating your audience and differentiating you from competitors.</p>
-    </article>
-  </div>
-</section>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <h1>Content Writing Services</h1>
+    <p>Strategic, SEO-driven, and emotionally resonant content that speaks your brand’s truth.</p>
+  </section>
 
-<section class="testimonials">
-  <h2>People Love What We Write</h2>
-  <ul class="testimonial-list" aria-label="Client testimonials">
-    <li class="testimonial-card" tabindex="0">
-      <p class="testimonial-text">"Asiatrix transformed our website content. Their words turned casual visitors into loyal customers and boosted our conversion rates!"</p>
-      <p class="testimonial-author">– Maya L., Startup Founder</p>
-    </li>
-    <li class="testimonial-card" tabindex="0">
-      <p class="testimonial-text">"Professional, timely, and creative. Their content writing service is a game-changer in building our brand's voice."</p>
-      <p class="testimonial-author">– Daniel K., Marketing Manager</p>
-    </li>
-    <li class="testimonial-card" tabindex="0">
-      <p class="testimonial-text">"The blog posts are informative yet engaging. Asiatrix's writing has made our SEO results soar!"</p>
-      <p class="testimonial-author">– Priya S., Content Strategist</p>
-    </li>
-  </ul>
-</section>
+  <!-- MAIN CONTENT -->
+  <section class="content">
+    <div class="section" data-scroll>
+      <h2>Crafting Stories That Connect</h2>
+      <p>We don’t just write words — we create experiences. From landing pages to full-scale content strategies, Asiatrix delivers creative content that engages, converts, and builds brand loyalty.</p>
+    </div>
 
-<section class="cta">
-  <h2>Ready to Elevate Your Content?</h2>
-  <p>Partner with Asiatrix and watch your brand’s story come alive with words that work.</p>
-  <button onclick="contactUs()">Get Your Custom Quote</button>
-</section>
+    <div class="section" data-scroll>
+      <h2>Our Content Expertise</h2>
+      <div class="feature-grid">
+        <div class="feature-box">
+          <i class="fas fa-pen-nib"></i>
+          <h3>Website Copywriting</h3>
+          <p>Clean, conversion-friendly content that enhances user experience and SEO.</p>
+        </div>
+        <div class="feature-box">
+          <i class="fas fa-search"></i>
+          <h3>SEO Content</h3>
+          <p>Optimized blogs and pages designed to rank and retain organic traffic.</p>
+        </div>
+        <div class="feature-box">
+          <i class="fas fa-bullhorn"></i>
+          <h3>Marketing Campaigns</h3>
+          <p>Compelling taglines, email content, and scripts that drive action.</p>
+        </div>
+        <div class="feature-box">
+          <i class="fas fa-newspaper"></i>
+          <h3>Articles & Blogs</h3>
+          <p>In-depth, authoritative posts tailored to your audience and industry.</p>
+        </div>
+        <div class="feature-box">
+          <i class="fas fa-file-signature"></i>
+          <h3>Brand Voice Guidelines</h3>
+          <p>Define your unique tone and messaging across all platforms.</p>
+        </div>
+        <div class="feature-box">
+          <i class="fas fa-globe"></i>
+          <h3>Multilingual Content</h3>
+          <p>Engage global audiences with translations and cultural localization.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section cta" data-scroll>
+      <a href="contactus.html">Start Your Content Project</a>
+    </div>
+  </section>
 
 <!-- FOOTER -->
 <footer class="site-footer">
@@ -361,16 +267,23 @@
       </div>
       <p class="copyright">© 2025 Asiatrix. All Rights Reserved.</p>
     </div>
+  </div>
+</footer>
 
-<script>
-  function scrollToFeatures() {
-    document.getElementById('features').scrollIntoView({ behavior: 'smooth' });
-  }
 
-  function contactUs() {
-    alert('Thank you for your interest! Please contact us at contact@asiatrix.com for a custom quote.');
-  }
-</script>
+  <!-- Scroll Animation -->
+  <script>
+    const scrollElements = document.querySelectorAll('[data-scroll]');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    scrollElements.forEach(el => observer.observe(el));
+  </script>
 
 </body>
 </html>
