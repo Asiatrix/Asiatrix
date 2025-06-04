@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Asiatrix | Cloud Services</title>
+  <link rel="icon" type="image/png" href="logo/favicon.png">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="footer.css" />
+  <script defer src="script.js"></script>
+  <script defer src="footer.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f4f9fd;
+      color: #1a1a1a;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    .login-icon a {
+      color: #007acc;
+      font-size: 1.2rem;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #007acc, #5fd3f3);
+      text-align: center;
+      padding: 100px 20px 60px;
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 720px;
+      margin: auto;
+    }
+
+    .content {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .section {
+      margin-bottom: 60px;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.7s ease-out;
+    }
+
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #007acc;
+    }
+
+    .section p {
+      font-size: 1.05rem;
+      color: #444;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .feature-box {
+      background: #fff;
+      padding: 25px 20px;
+      border-radius: 15px;
+      border: 1px solid #dce9f3;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03);
+      transition: transform 0.3s ease;
+    }
+
+    .feature-box:hover {
+      transform: translateY(-8px);
+    }
+
+    .feature-box i {
+      font-size: 2rem;
+      color: #5cbaf5;
+      margin-bottom: 15px;
+    }
+
+    .feature-box h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .cta {
+      text-align: center;
+      margin: 70px 0;
+    }
+
+    .cta a {
+      text-decoration: none;
+      background: #007acc;
+      color: white;
+      padding: 15px 30px;
+      font-size: 1.1rem;
+      border-radius: 30px;
+      transition: background 0.3s ease;
+    }
+
+    .cta a:hover {
+      background: #005c99;
+    }
+
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .section h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header id="mainHeader" class="transparent">
+    <div class="container">
+<div class="logo">
+  <a href="index.html">
+    <img src="logo/logo.png" alt="Asiatrix Logo" />
+  </a>
+</div>
+      <nav class="desktop-menu">
+        <ul>
+        <li><a href="services.html">What we do</a></li>
+        <li><a href="aboutus.html">Who we are</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="enterprises.html">Enterprise</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+        </ul>
+      </nav>
+
+    <div class="login-icon">
+     <i class="far fa-user"></i>
+    </div>
+
+      <!-- Mobile Hamburger Menu -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="services.html">What we do</a></li>
+        <li><a href="aboutus.html">Who we are</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="enterprises.html">Enterprise</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <h1>Cloud Services</h1>
+    <p>Scalable, secure, and reliable cloud infrastructure to power your business without limits.</p>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <section class="content">
+    <div class="section" data-scroll>
+      <h2>Empower Your Digital Growth</h2>
+      <p>Asiatrix offers expert cloud strategy and development to help your organization scale quickly and securely. From hosting enterprise-grade platforms to integrating cloud-native tools, we enable innovation without compromise.</p>
+    </div>
+
+    <div class="section" data-scroll>
+      <h2>Our Cloud Capabilities</h2>
+      <div class="feature-grid">
+        <div class="feature-box">
+          <i class="fas fa-cloud-upload-alt"></i>
+          <h3>Cloud Migration</h3>
+          <p>Seamlessly move from legacy infrastructure to powerful cloud environments.</p>
+        </div>
+        <div class="feature-box">
+          <i class="fas fa-server"></i>
+          <h3>DevOps & Automation</h3>
+          <p>Streamline CI/CD pipelines, auto-deployment, and infrastructure as code.</p>
+        </div>
+        <div class="feature-box">
+          <i class="fas fa-lock"></i>
+          <h3>Cloud Security</h3>
+          <p>Implement zero-trust architecture and secure all layers of your cloud stack.</p>
+        </div>
+        <div class="feature-box">
+          <i class="fas fa-chart-line"></i>
+          <h3>Cloud Analytics</h3>
+          <p>Leverage data pipelines, real-time dashboards, and business intelligence tools.</p>
+        </div>
+        <div class="feature-box">
+          <i class="fas fa-code-branch"></i>
+          <h3>Hybrid & Multi-Cloud</h3>
+          <p>Deploy solutions across AWS, Azure, and GCP with seamless integration.</p>
+        </div>
+        <div class="feature-box">
+          <i class="fas fa-cogs"></i>
+          <h3>Managed Cloud Services</h3>
+          <p>We monitor, optimize, and support your cloud systems 24/7.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section cta" data-scroll>
+      <a href="contactus.html">Request a Cloud Consultation</a>
+    </div>
+  </section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <h2>Innovating Culture, Designing Futures</h2>
+      <div class="footer-links">
+<ul>
+  <li><a href="notfound.html">Preference Center</a></li>
+  <li><a href="notfound.html">Careers</a></li>
+  <li><a href="notfound.html">About Us</a></li>
+  <li><a href="notfound.html">Contact Us</a></li>
+  <li><a href="notfound.html">Locations</a></li>
+  <li><a href="notfound.html">Sitemap</a></li>
+</ul>
+<ul>
+  <li><a href="notfound.html">Privacy Statement</a></li>
+  <li><a href="notfound.html">Terms & Conditions</a></li>
+  <li><a href="notfound.html">Cookie Policy/Settings</a></li>
+  <li><a href="notfound.html">Accessibility Statement</a></li>
+  <li><a href="notfound.html">Legal</a></li>
+</ul>
+      </div>
+      <p class="copyright">© 2025 Asiatrix. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+  <!-- Scroll Animation -->
+  <script>
+    const scrollElements = document.querySelectorAll('[data-scroll]');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    scrollElements.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

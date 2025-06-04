@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Asiatrix | Mobile App Development</title>
+  <link rel="icon" type="image/png" href="logo/favicon.png">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="footer.css" />
+  <script defer src="script.js"></script>
+  <script defer src="footer.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f9fbfd;
+      color: #222;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    .login-icon a {
+      color: #1f4068;
+      font-size: 1.2rem;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #000428, #004e92);
+      color: white;
+      text-align: center;
+      padding: 100px 20px 60px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .content {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .section {
+      margin-bottom: 60px;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.7s ease-out;
+    }
+
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #0b2545;
+    }
+
+    .section p {
+      font-size: 1.05rem;
+      color: #444;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .feature-box {
+      background: #fff;
+      padding: 25px 20px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+      transition: transform 0.3s ease;
+    }
+
+    .feature-box:hover {
+      transform: translateY(-8px);
+    }
+
+    .feature-box i {
+      font-size: 2rem;
+      color: #007BFF;
+      margin-bottom: 15px;
+    }
+
+    .feature-box h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    .cta {
+      text-align: center;
+      margin: 70px 0;
+    }
+
+    .cta a {
+      text-decoration: none;
+      background: #007BFF;
+      color: white;
+      padding: 15px 30px;
+      font-size: 1.1rem;
+      border-radius: 30px;
+      transition: background 0.3s ease;
+    }
+
+    .cta a:hover {
+      background: #0056b3;
+    }
+
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .section h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header id="mainHeader" class="transparent">
+    <div class="container">
+<div class="logo">
+  <a href="index.html">
+    <img src="logo/logo.png" alt="Asiatrix Logo" />
+  </a>
+</div>
+      <nav class="desktop-menu">
+        <ul>
+        <li><a href="services.html">What we do</a></li>
+        <li><a href="aboutus.html">Who we are</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="enterprises.html">Enterprise</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+        </ul>
+      </nav>
+
+    <div class="login-icon">
+     <i class="far fa-user"></i>
+    </div>
+
+      <!-- Mobile Hamburger Menu -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="services.html">What we do</a></li>
+        <li><a href="aboutus.html">Who we are</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="enterprises.html">Enterprise</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <h1>Mobile App Development</h1>
+    <p>Innovative mobile solutions for iOS and Android to scale your digital presence and engage your customers.</p>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <section class="content">
+    <div class="section" data-scroll>
+      <h2>We Build Apps People Love</h2>
+      <p>From sleek interfaces to scalable backend systems, we build mobile apps that drive growth, retention, and user satisfaction. Our team blends strategy, design, and development to launch your ideas successfully.</p>
+    </div>
+
+    <div class="section" data-scroll>
+      <h2>Our Mobile Development Services</h2>
+      <div class="feature-grid">
+        <div class="feature-box">
+          <i class="fas fa-rocket"></i>
+          <h3>iOS & Android</h3>
+          <p>Native and cross-platform apps built for performance.</p>
+        </div>
+        <div class="feature-box">
+          <i class="fas fa-drafting-compass"></i>
+          <h3>UI/UX Design</h3>
+          <p>Intuitive interfaces that ensure delightful user experiences.</p>
+        </div>
+        <div class="feature-box">
+          <i class="fas fa-server"></i>
+          <h3>Backend Development</h3>
+          <p>Secure, scalable systems to power your mobile apps.</p>
+        </div>
+        <div class="feature-box">
+          <i class="fas fa-bug"></i>
+          <h3>QA & Testing</h3>
+          <p>End-to-end testing to deliver flawless, bug-free apps.</p>
+        </div>
+        <div class="feature-box">
+          <i class="fas fa-sync-alt"></i>
+          <h3>App Maintenance</h3>
+          <p>Ongoing updates and performance monitoring post-launch.</p>
+        </div>
+        <div class="feature-box">
+          <i class="fas fa-mobile-alt"></i>
+          <h3>PWA & Hybrid Apps</h3>
+          <p>Progressive web apps and React Native-based hybrids.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section cta" data-scroll>
+      <a href="contactus.html">Let's Build Your App</a>
+    </div>
+  </section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <h2>Innovating Culture, Designing Futures</h2>
+      <div class="footer-links">
+<ul>
+  <li><a href="notfound.html">Preference Center</a></li>
+  <li><a href="notfound.html">Careers</a></li>
+  <li><a href="notfound.html">About Us</a></li>
+  <li><a href="notfound.html">Contact Us</a></li>
+  <li><a href="notfound.html">Locations</a></li>
+  <li><a href="notfound.html">Sitemap</a></li>
+</ul>
+<ul>
+  <li><a href="notfound.html">Privacy Statement</a></li>
+  <li><a href="notfound.html">Terms & Conditions</a></li>
+  <li><a href="notfound.html">Cookie Policy/Settings</a></li>
+  <li><a href="notfound.html">Accessibility Statement</a></li>
+  <li><a href="notfound.html">Legal</a></li>
+</ul>
+      </div>
+      <p class="copyright">© 2025 Asiatrix. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+  <!-- Scroll Animation Script -->
+  <script>
+    const scrollElements = document.querySelectorAll('[data-scroll]');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    scrollElements.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

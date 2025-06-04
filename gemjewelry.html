@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Asiatrix | Gem & Jewelry Solutions</title>
+  <link rel="icon" type="image/png" href="logo/favicon.png">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="footer.css" />
+  <script defer src="script.js"></script>
+  <script defer src="footer.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #fcf9f5;
+      color: #222;
+    }
+
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    .login-icon a {
+      color: #7b6f5e;
+      font-size: 1.2rem;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #d4af37, #fff8dc);
+      text-align: center;
+      padding: 100px 20px 60px;
+      color: #222;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      font-family: 'Georgia', serif;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 720px;
+      margin: auto;
+    }
+
+    .content {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .section {
+      margin-bottom: 60px;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.7s ease-out;
+    }
+
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #a67c00;
+    }
+
+    .section p {
+      font-size: 1.05rem;
+      color: #444;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .feature-box {
+      background: #fff;
+      padding: 25px 20px;
+      border-radius: 15px;
+      border: 1px solid #e7d8c3;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .feature-box:hover {
+      transform: translateY(-8px);
+    }
+
+    .feature-box i {
+      font-size: 2rem;
+      color: #d4af37;
+      margin-bottom: 15px;
+    }
+
+    .feature-box h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .cta {
+      text-align: center;
+      margin: 70px 0;
+    }
+
+    .cta a {
+      text-decoration: none;
+      background: #d4af37;
+      color: white;
+      padding: 15px 30px;
+      font-size: 1.1rem;
+      border-radius: 30px;
+      transition: background 0.3s ease;
+    }
+
+    .cta a:hover {
+      background: #b89b2e;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .section h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header id="mainHeader" class="transparent">
+    <div class="container">
+<div class="logo">
+  <a href="index.html">
+    <img src="logo/logo.png" alt="Asiatrix Logo" />
+  </a>
+</div>
+      <nav class="desktop-menu">
+        <ul>
+        <li><a href="services.html">What we do</a></li>
+        <li><a href="aboutus.html">Who we are</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="enterprises.html">Enterprise</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+        </ul>
+      </nav>
+
+    <div class="login-icon">
+     <i class="far fa-user"></i>
+    </div>
+
+      <!-- Mobile Hamburger Menu -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="services.html">What we do</a></li>
+        <li><a href="aboutus.html">Who we are</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="enterprises.html">Enterprise</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <h1>Gem & Jewelry Solutions</h1>
+    <p>Crafting digital brilliance for jewelers, manufacturers, and luxury retailers with custom tech solutions.</p>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <section class="content">
+    <div class="section" data-scroll>
+      <h2>Digital Craftsmanship for Timeless Treasures</h2>
+      <p>Asiatrix provides end-to-end digital solutions for the gem and jewelry industry helping brands embrace modern tech without losing the elegance and heritage of the craft. From 3D product viewers to eCommerce platforms, we deliver luxury-grade performance with precision.</p>
+    </div>
+
+    <div class="section" data-scroll>
+      <h2>Our Specialized Offerings</h2>
+      <div class="feature-grid">
+        <div class="feature-box">
+          <i class="fas fa-gem"></i>
+          <h3>Virtual Try-On</h3>
+          <p>Augmented reality experiences for customers to try jewelry online.</p>
+        </div>
+        <div class="feature-box">
+          <i class="fas fa-store"></i>
+          <h3>Jewelry eCommerce</h3>
+          <p>Elegant, secure, and conversion-optimized online stores tailored to jewelers.</p>
+        </div>
+        <div class="feature-box">
+          <i class="fas fa-cube"></i>
+          <h3>3D Product Display</h3>
+          <p>Interactive 3D visualizations that bring your pieces to life.</p>
+        </div>
+        <div class="feature-box">
+          <i class="fas fa-cogs"></i>
+          <h3>Inventory & CRM</h3>
+          <p>Manage stock, sales, and customer relations with ease and automation.</p>
+        </div>
+        <div class="feature-box">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Blockchain Authentication</h3>
+          <p>Ensure traceability and authenticity for high-value items.</p>
+        </div>
+        <div class="feature-box">
+          <i class="fas fa-bullhorn"></i>
+          <h3>Luxury Brand Marketing</h3>
+          <p>Targeted digital strategies for high-end audience acquisition.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section cta" data-scroll>
+      <a href="contactus.html">Let's Sparkle Together</a>
+    </div>
+  </section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <h2>Innovating Culture, Designing Futures</h2>
+      <div class="footer-links">
+<ul>
+  <li><a href="notfound.html">Preference Center</a></li>
+  <li><a href="notfound.html">Careers</a></li>
+  <li><a href="notfound.html">About Us</a></li>
+  <li><a href="notfound.html">Contact Us</a></li>
+  <li><a href="notfound.html">Locations</a></li>
+  <li><a href="notfound.html">Sitemap</a></li>
+</ul>
+<ul>
+  <li><a href="notfound.html">Privacy Statement</a></li>
+  <li><a href="notfound.html">Terms & Conditions</a></li>
+  <li><a href="notfound.html">Cookie Policy/Settings</a></li>
+  <li><a href="notfound.html">Accessibility Statement</a></li>
+  <li><a href="notfound.html">Legal</a></li>
+</ul>
+      </div>
+      <p class="copyright">© 2025 Asiatrix. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+  <!-- Scroll Animation -->
+  <script>
+    const scrollElements = document.querySelectorAll('[data-scroll]');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    scrollElements.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
