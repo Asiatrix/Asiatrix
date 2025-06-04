@@ -2,211 +2,205 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Asiatrix - Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login | Asiatrix</title>
+  <link rel="icon" type="image/png" href="logo/favicon.png">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="footer.css" />
+  <script defer src="script.js"></script>
+  <script defer src="footer.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    /* Reset & base */
-    *, *::before, *::after {
-      box-sizing: border-box;
-    }
-    body, html {
+    * {
       margin: 0;
       padding: 0;
-      height: 100vh;
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      background: linear-gradient(135deg, #e9edf3 0%, #f9fbfc 100%);
-      color: #2c3e50;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
+      box-sizing: border-box;
     }
-    
-    /* Container */
-    .login-container {
-      background: #ffffff;
-      padding: 48px 48px 48px;
-      border-radius: 12px;
-      width: 100%;
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #f0f4f8, #d9eaf7);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    .login-wrapper {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 20px;
+    }
+
+    .login-box {
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
       max-width: 400px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+      width: 100%;
+    }
+
+    .login-box h2 {
+      margin-bottom: 25px;
+      color: #007acc;
       text-align: center;
     }
 
-    /* Heading */
-    .login-container h1 {
-      font-weight: 700;
-      font-size: 2.0rem;
-      margin-bottom: 12px;
-      color: #1a1a1a;
-      user-select: none;
+    .login-box .input-group {
+      margin-bottom: 20px;
     }
 
-    .login-container p {
-      font-weight: 400;
-      font-size: 1rem;
-      color: #555555;
-      margin-bottom: 36px;
-      user-select: none;
-    }
-
-    /* Form */
-    form {
-      text-align: left;
-    }
-
-    label {
+    .input-group label {
       display: block;
       font-weight: 600;
-      font-size: 0.95rem;
-      color: #444444;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
 
-    input[type="email"],
-    input[type="password"] {
+    .input-group input {
       width: 100%;
-      padding: 12px 14px;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
       font-size: 1rem;
-      border: 1.5px solid #c4c9d2;
-      border-radius: 6px;
-      transition: border-color 0.3s ease;
-      font-family: inherit;
-      outline-offset: 2px;
-    }
-    input[type="email"]:focus,
-    input[type="password"]:focus {
-      border-color: #4a90e2;
-      box-shadow: 0 0 8px rgba(74, 144, 226, 0.5);
-      outline: none;
     }
 
-    /* Error message */
-    .error-message {
-      color: #d53838;
-      font-size: 0.85rem;
-      margin-top: 6px;
-      display: none;
-    }
-
-    /* Submit Button */
-    button[type="submit"] {
+    .login-box button {
       width: 100%;
-      padding: 14px 0;
-      margin-top: 28px;
-      background-color: #4a90e2;
+      padding: 12px;
+      background-color: #007acc;
+      color: white;
       border: none;
       border-radius: 8px;
-      color: #fff;
-      font-weight: 700;
-      font-size: 1.1rem;
+      font-size: 1rem;
       cursor: pointer;
-      transition: background-color 0.3s ease;
-      user-select: none;
-    }
-    button[type="submit"]:hover,
-    button[type="submit"]:focus {
-      background-color: #3a78cc;
-      outline: none;
+      transition: background 0.3s ease;
     }
 
-    /* Forgot password */
-    .forgot-password {
-      margin-top: 16px;
-      font-weight: 500;
+    .login-box button:hover {
+      background-color: #005fa3;
+    }
+
+    .login-box .link {
+      text-align: center;
+      margin-top: 15px;
       font-size: 0.9rem;
-      color: #4a90e2;
-      text-align: right;
-      user-select: none;
-    }
-    .forgot-password a {
-      color: inherit;
-      text-decoration: none;
-      cursor: pointer;
-      transition: color 0.3s ease;
-    }
-    .forgot-password a:hover,
-    .forgot-password a:focus {
-      text-decoration: underline;
-      outline: none;
     }
 
-    /* Responsive */
-    @media (max-width: 440px) {
-      .login-container {
-        padding: 36px 28px 36px;
-      }
-      .login-container h1 {
-        font-size: 1.6rem;
-      }
-      button[type="submit"] {
-        font-size: 1rem;
-      }
+    .login-box .link a {
+      color: #007acc;
+      text-decoration: none;
     }
+
+    .login-box .link a:hover {
+      text-decoration: underline;
+    }
+
   </style>
 </head>
 <body>
 
-  <div class="login-container" role="main" aria-labelledby="login-title">
-    <h1 id="login-title">Welcome Back</h1>
-    <p>Please sign in to your account</p>
-    <form id="loginForm" novalidate>
-      <label for="email">Email Address</label>
-      <input type="email" id="email" name="email" autocomplete="username" required aria-describedby="emailError" aria-required="true" />
-      <div class="error-message" id="emailError">Please enter a valid email address.</div>
+  <header id="mainHeader" class="transparent">
+    <div class="container">
+<div class="logo">
+  <a href="index.html">
+    <img src="logo/logo.png" alt="Asiatrix Logo" />
+  </a>
+</div>
+      <nav class="desktop-menu">
+        <ul>
+        <li><a href="services.html">What we do</a></li>
+        <li><a href="aboutus.html">Who we are</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="enterprises.html">Enterprise</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+        </ul>
+      </nav>
 
-      <label for="password">Password</label>
-      <input type="password" id="password" name="password" autocomplete="current-password" minlength="6" required aria-describedby="passwordError" aria-required="true" />
-      <div class="error-message" id="passwordError">Password must be at least 6 characters.</div>
+    <div class="login-icon">
+     <i class="far fa-user"></i>
+    </div>
 
-      <button type="submit">Sign In</button>
-    </form>
-    <div class="forgot-password">
-      <a href="#" tabindex="0" aria-label="Forgot password?">Forgot password?</a>
+      <!-- Mobile Hamburger Menu -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="services.html">What we do</a></li>
+        <li><a href="aboutus.html">Who we are</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="enterprises.html">Enterprise</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- LOGIN FORM -->
+  <div class="login-wrapper">
+    <div class="login-box">
+      <h2>Login to Your Account</h2>
+      <form action="#" method="post">
+        <div class="input-group">
+          <label for="username">Email or Username</label>
+          <input type="text" id="username" name="username" required>
+        </div>
+
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+
+        <button type="submit">Login</button>
+
+        <div class="link">
+          <p>Don't have an account? <a href="#">Register here</a></p>
+        </div>
+      </form>
     </div>
   </div>
 
-  <script>
-    const form = document.getElementById('loginForm');
-    const email = document.getElementById('email');
-    const password = document.getElementById('password');
-    const emailError = document.getElementById('emailError');
-    const passwordError = document.getElementById('passwordError');
+  <!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <h2>Innovating Culture, Designing Futures</h2>
+      <div class="footer-links">
+<ul>
+  <li><a href="notfound.html">Preference Center</a></li>
+  <li><a href="notfound.html">Careers</a></li>
+  <li><a href="notfound.html">About Us</a></li>
+  <li><a href="notfound.html">Contact Us</a></li>
+  <li><a href="notfound.html">Locations</a></li>
+  <li><a href="notfound.html">Sitemap</a></li>
+</ul>
+<ul>
+  <li><a href="notfound.html">Privacy Statement</a></li>
+  <li><a href="notfound.html">Terms & Conditions</a></li>
+  <li><a href="notfound.html">Cookie Policy/Settings</a></li>
+  <li><a href="notfound.html">Accessibility Statement</a></li>
+  <li><a href="notfound.html">Legal</a></li>
+</ul>
+      </div>
+      <p class="copyright">© 2025 Asiatrix. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
 
-    function validateEmail(emailValue) {
-      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailValue);
-    }
-
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      let valid = true;
-
-      if (!validateEmail(email.value.trim())) {
-        emailError.style.display = 'block';
-        email.setAttribute('aria-invalid', 'true');
-        valid = false;
-      } else {
-        emailError.style.display = 'none';
-        email.removeAttribute('aria-invalid');
-      }
-
-      if (password.value.trim().length < 6) {
-        passwordError.style.display = 'block';
-        password.setAttribute('aria-invalid', 'true');
-        valid = false;
-      } else {
-        passwordError.style.display = 'none';
-        password.removeAttribute('aria-invalid');
-      }
-
-      if (valid) {
-        alert('Login successful! (This is a demo alert)');
-        form.reset();
-      }
-    });
-  </script>
-  
 </body>
 </html>
-
