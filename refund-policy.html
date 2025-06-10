@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Refund Policy | Asiatrix</title>
+  <link rel="icon" type="image/png" href="logo/favicon.png">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="footer.css" />
+  <script defer src="script.js"></script>
+  <script defer src="footer.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9fcff;
+      color: #333;
+      line-height: 1.7;
+    }
+
+    header {
+      background: #fff;
+      padding: 20px 40px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #007acc;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    section.refund-box {
+      background: white;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.06);
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.6s ease;
+    }
+
+    section.refund-box.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2 {
+      color: #004e8c;
+      font-size: 1.4rem;
+      margin-top: 25px;
+    }
+
+    p {
+      margin-top: 10px;
+      font-size: 1rem;
+    }
+
+    ul {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+    }
+
+    footer {
+      background: #eaf3f9;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+      <div class="logo">
+        <a href="index.html"><img src="logo/logo.png" alt="Asiatrix Logo" style="height: 40px;"></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="container">
+    <h1>Refund Policy</h1>
+    <section class="refund-box" data-scroll>
+      <h2>1. Overview</h2>
+      <p>At Asiatrix, we value customer satisfaction. Our refund policy is designed to be fair, transparent, and easy to understand. If you're not satisfied with our services, please review the following guidelines.</p>
+
+      <h2>2. Eligibility for Refunds</h2>
+      <ul>
+        <li>Refunds are available only within 7 days of purchase for non-delivered or unused services.</li>
+        <li>If work has already commenced or been delivered, partial refunds may be offered at our discretion.</li>
+        <li>Custom development, branding, or design projects are non-refundable once design or coding work has begun.</li>
+      </ul>
+
+      <h2>3. Non-Refundable Services</h2>
+      <p>The following services are not eligible for refunds:</p>
+      <ul>
+        <li>Logo and branding packages after design concepts are sent.</li>
+        <li>Content writing services once submitted to the client.</li>
+        <li>Monthly subscription plans after the billing cycle starts.</li>
+      </ul>
+
+      <h2>4. How to Request a Refund</h2>
+      <p>To request a refund, please email us at <a href="mailto:billing@asiatrix.com">billing@asiatrix.com</a> with the following information:</p>
+      <ul>
+        <li>Full name</li>
+        <li>Order ID or invoice number</li>
+        <li>Reason for requesting a refund</li>
+      </ul>
+      <p>We will process your request within 3–5 business days.</p>
+
+      <h2>5. Dispute Resolution</h2>
+      <p>If you're unhappy with the outcome, we encourage open communication to reach a mutual agreement. Legal disputes will fall under the jurisdiction of Indian courts.</p>
+
+      <h2>6. Contact</h2>
+      <p>If you have any questions, contact our support team at <a href="mailto:support@asiatrix.com">support@asiatrix.com</a>.</p>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 Asiatrix. All Rights Reserved.
+  </footer>
+
+  <!-- JS for scroll animation -->
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    document.querySelectorAll('[data-scroll]').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
