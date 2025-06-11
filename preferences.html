@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Asiatrix | Preference Center</title>
+  <link rel="icon" type="image/png" href="logo/favicon.png">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="footer.css" />
+  <script defer src="script.js"></script>
+  <script defer src="footer.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background: #fafafa;
+      color: #1a1a1a;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #1a1a1a;
+      font-weight: 500;
+    }
+
+
+    .hero {
+      background: linear-gradient(to right, #007acc, #00c3ff);
+      color: white;
+      text-align: center;
+      padding: 120px 20px 60px;
+      margin-top: 70px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .content {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .section {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.6s ease-out;
+      margin-bottom: 50px;
+    }
+
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      color: #007acc;
+      margin-bottom: 20px;
+    }
+
+    .section p {
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    .preference-form {
+      background: white;
+      border: 1px solid #e0e0e0;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .preference-form label {
+      font-size: 1rem;
+      color: #333;
+    }
+
+    .preference-form input[type="checkbox"] {
+      margin-right: 10px;
+    }
+
+    .preference-form select {
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .preference-form button {
+      padding: 12px 25px;
+      background: #007acc;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+
+    .preference-form button:hover {
+      background: #005c99;
+    }
+
+    .cta {
+      text-align: center;
+    }
+
+    .cta a {
+      background: #007acc;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+
+    .cta a:hover {
+      background: #005c99;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .section h2 {
+        font-size: 1.5rem;
+      }
+
+      nav ul {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header id="mainHeader" class="transparent">
+    <div class="container">
+<div class="logo">
+  <a href="index.html">
+    <img src="logo/logo.png" alt="Asiatrix Logo" />
+  </a>
+</div>
+      <nav class="desktop-menu">
+        <ul>
+        <li><a href="services.html">What we do</a></li>
+        <li><a href="aboutus.html">Who we are</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="enterprises.html">Enterprise</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+        </ul>
+      </nav>
+
+    <div class="login-icon">
+     <i class="far fa-user"></i>
+    </div>
+
+      <!-- Mobile Hamburger Menu -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="services.html">What we do</a></li>
+        <li><a href="aboutus.html">Who we are</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="enterprises.html">Enterprise</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Preference Center</h1>
+    <p>Manage your communication preferences and stay in control of what you receive from Asiatrix.</p>
+  </section>
+
+  <section class="content">
+    <div class="section" data-scroll>
+      <h2>Your Communication Preferences</h2>
+      <p>Select the topics you’re interested in, and tell us how often you’d like to hear from us.</p>
+    </div>
+
+    <div class="section form-section" data-scroll>
+      <form class="preference-form">
+        <label><input type="checkbox" name="news"> Company News & Announcements</label>
+        <label><input type="checkbox" name="insights"> Industry Insights & Reports</label>
+        <label><input type="checkbox" name="offers"> Exclusive Offers & Events</label>
+        <label><input type="checkbox" name="blog"> Weekly Blog Highlights</label>
+
+        <label for="frequency">Email Frequency:</label>
+        <select name="frequency" id="frequency">
+          <option value="weekly">Once a week</option>
+          <option value="monthly">Once a month</option>
+          <option value="never">Only when it's important</option>
+        </select>
+
+        <button type="submit">Save Preferences</button>
+      </form>
+    </div>
+
+    <div class="section cta" data-scroll>
+      <a href="index.html">Back to Homepage</a>
+    </div>
+  </section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <h2>Innovating Culture, Designing Futures</h2>
+      <div class="footer-links">
+<ul>
+  <li><a href="preferences.html">Preference Center</a></li>
+  <li><a href="careers.html">Careers</a></li>
+  <li><a href="aboutus.html">About Us</a></li>
+  <li><a href="contactus.html">Contact Us</a></li>
+  <li><a href="locations.html">Locations</a></li>
+  <li><a href="notfound.html">Sitemap</a></li>
+</ul>
+<ul>
+  <li><a href="privacy-policy.html">Privacy Statement</a></li>
+  <li><a href="terms-condition.html">Terms & Conditions</a></li>
+  <li><a href="cookie.html">Cookie Policy/Settings</a></li>
+  <li><a href="refund-policy.html">Refund Policy</a></li>
+</ul>
+      </div>
+      <p class="copyright">© 2025 Asiatrix. All Rights Reserved.</p>
+    </div>
+  <script>
+    const scrollElements = document.querySelectorAll('[data-scroll]');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    scrollElements.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
