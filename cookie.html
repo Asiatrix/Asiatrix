@@ -4,9 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Asiatrix | Cookie Policy</title>
-  <link rel="icon" href="logo/favicon.png" type="image/png" />
+  <link rel="icon" type="image/png" href="logo/favicon.png">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="footer.css" />
+  <script defer src="script.js"></script>
+  <script defer src="footer.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
   <style>
     body {
       font-family: "Segoe UI", sans-serif;
@@ -14,22 +17,6 @@
       color: #1a1a1a;
       margin: 0;
       padding: 0;
-    }
-
-    header {
-      background: transparent;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      padding: 15px 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 999;
-    }
-
-    .logo img {
-      height: 40px;
     }
 
     nav ul {
@@ -101,47 +88,6 @@
       line-height: 1.8;
     }
 
-    footer {
-      background: #1a1a1a;
-      color: white;
-      padding: 50px 20px;
-      text-align: center;
-    }
-
-    footer h2 {
-      font-size: 1.5rem;
-      margin-bottom: 20px;
-    }
-
-    footer .footer-links {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 40px;
-      margin-bottom: 20px;
-    }
-
-    footer ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    footer ul li a {
-      color: #ccc;
-      text-decoration: none;
-      font-size: 0.95rem;
-      line-height: 1.8;
-    }
-
-    footer ul li a:hover {
-      text-decoration: underline;
-    }
-
-    footer .copyright {
-      font-size: 0.85rem;
-      color: #aaa;
-    }
-
     @media (max-width: 600px) {
       .hero h1 {
         font-size: 2rem;
@@ -159,19 +105,43 @@
 </head>
 <body>
 
-  <header>
-    <div class="logo">
-      <a href="index.html"><img src="logo/logo.png" alt="Asiatrix Logo"></a>
+  <header id="mainHeader" class="transparent">
+    <div class="container">
+<div class="logo">
+  <a href="index.html">
+    <img src="logo/logo.png" alt="Asiatrix Logo" />
+  </a>
+</div>
+      <nav class="desktop-menu">
+        <ul>
+        <li><a href="services.html">What we do</a></li>
+        <li><a href="aboutus.html">Who we are</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="enterprises.html">Enterprise</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+        </ul>
+      </nav>
+
+    <div class="login-icon">
+     <i class="far fa-user"></i>
     </div>
-    <nav>
+
+      <!-- Mobile Hamburger Menu -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
       <ul>
         <li><a href="services.html">What we do</a></li>
         <li><a href="aboutus.html">Who we are</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="enterprises.html">Enterprise</a></li>
         <li><a href="contactus.html">Contact</a></li>
       </ul>
-    </nav>
-    <div class="login-icon">
-      <i class="far fa-user"></i>
     </div>
   </header>
 
@@ -210,26 +180,28 @@
     </div>
   </section>
 
-  <footer>
-    <h2>Innovating Culture, Designing Futures</h2>
-    <div class="footer-links">
-      <ul>
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <h2>Innovating Culture, Designing Futures</h2>
+      <div class="footer-links">
+<ul>
   <li><a href="preferences.html">Preference Center</a></li>
   <li><a href="careers.html">Careers</a></li>
   <li><a href="aboutus.html">About Us</a></li>
   <li><a href="contactus.html">Contact Us</a></li>
-  <li><a href="locations.html">Locations</a></li>
-  <li><a href="notfound.html">Sitemap</a></li>
+  <li><a href="sitemap.html">Sitemap</a></li>
 </ul>
 <ul>
   <li><a href="privacy-policy.html">Privacy Statement</a></li>
   <li><a href="terms-condition.html">Terms & Conditions</a></li>
   <li><a href="cookie.html">Cookie Policy/Settings</a></li>
   <li><a href="refund-policy.html">Refund Policy</a></li>
-      </ul>
+</ul>
+      </div>
+      <p class="copyright">© 2025 Asiatrix. All Rights Reserved.</p>
     </div>
-    <p class="copyright">© 2025 Asiatrix. All Rights Reserved.</p>
-  </footer>
 
   <script>
     const scrollElements = document.querySelectorAll('[data-scroll]');

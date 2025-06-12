@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Asiatrix | Enterprise Solutions</title>
+  <link rel="icon" type="image/png" href="logo/favicon.png">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="footer.css" />
+  <script defer src="script.js"></script>
+  <script defer src="footer.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f7f7f7;
+      color: #1a1a1a;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #1a1a1a;
+      font-weight: 500;
+    }
+
+    .login-icon {
+      font-size: 20px;
+      color: #007acc;
+      cursor: pointer;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #001f3f, #0074D9);
+      color: white;
+      text-align: center;
+      padding: 120px 20px 60px;
+      margin-top: 70px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .content {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .section {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.6s ease-out;
+      margin-bottom: 50px;
+    }
+
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      color: #007acc;
+      margin-bottom: 15px;
+    }
+
+    .section p {
+      font-size: 1.05rem;
+      color: #444;
+      line-height: 1.8;
+    }
+
+    .enterprise-card-grid {
+      display: grid;
+      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      margin-top: 30px;
+    }
+
+    .enterprise-card {
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      border: 1px solid #ddd;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .enterprise-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .enterprise-card h3 {
+      color: #005fa3;
+      margin-bottom: 10px;
+    }
+
+    .enterprise-card p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .section h2 {
+        font-size: 1.5rem;
+      }
+
+      nav ul {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header id="mainHeader" class="transparent">
+  <div class="container">
+    <div class="logo">
+      <a href="index.html">
+        <img src="logo/logo.png" alt="Asiatrix Logo" />
+      </a>
+    </div>
+    <nav class="desktop-menu">
+      <ul>
+        <li><a href="services.html">What we do</a></li>
+        <li><a href="aboutus.html">Who we are</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="enterprises.html">Enterprise</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="login-icon">
+      <i class="far fa-user"></i>
+    </div>
+
+    <!-- Mobile Hamburger Menu -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="services.html">What we do</a></li>
+      <li><a href="aboutus.html">Who we are</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="enterprises.html">Enterprise</a></li>
+      <li><a href="contactus.html">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Enterprise Solutions</h1>
+  <p>Empowering businesses with scalable, secure, and smart solutions for tomorrow's challenges.</p>
+</section>
+
+<section class="content">
+  <div class="section" data-scroll>
+    <h2>Our Enterprise Offering</h2>
+    <p>Asiatrix delivers enterprise-grade digital transformation across industries with a focus on scalability, security, and innovation. We tailor solutions to meet large-scale needs — whether you're streamlining operations, deploying cloud architecture, or building end-to-end platforms.</p>
+  </div>
+
+  <div class="section enterprise-card-grid" data-scroll>
+    <div class="enterprise-card">
+      <h3>Digital Infrastructure</h3>
+      <p>We help modernize your IT landscape with cloud-native architectures, microservices, and scalable systems tailored to enterprise-grade performance.</p>
+    </div>
+
+    <div class="enterprise-card">
+      <h3>Data & Analytics</h3>
+      <p>Turn complex data into clear insights with real-time dashboards, AI-powered analytics, and predictive modeling built for decision-makers.</p>
+    </div>
+
+    <div class="enterprise-card">
+      <h3>Enterprise Applications</h3>
+      <p>Design, develop, and manage custom enterprise software — from ERPs to CRMs — built to integrate seamlessly and scale globally.</p>
+    </div>
+
+    <div class="enterprise-card">
+      <h3>Cybersecurity & Compliance</h3>
+      <p>Stay protected with our security-first approach. We design secure systems that meet global compliance standards (ISO, GDPR, etc.).</p>
+    </div>
+
+    <div class="enterprise-card">
+      <h3>Automation & AI</h3>
+      <p>Empower your teams with smart automation — from RPA bots to intelligent workflows — cutting costs and improving accuracy.</p>
+    </div>
+
+    <div class="enterprise-card">
+      <h3>Enterprise UX</h3>
+      <p>Deliver seamless experiences at scale. We create accessible, intuitive, and responsive designs for enterprise platforms used by thousands.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <h2>Innovating Culture, Designing Futures</h2>
+      <div class="footer-links">
+        <ul>
+          <li><a href="preferences.html">Preference Center</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="contactus.html">Contact Us</a></li>
+          <li><a href="sitemap.html">Sitemap</a></li>
+        </ul>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Statement</a></li>
+          <li><a href="terms-condition.html">Terms & Conditions</a></li>
+          <li><a href="cookie.html">Cookie Policy/Settings</a></li>
+          <li><a href="refund-policy.html">Refund Policy</a></li>
+        </ul>
+      </div>
+      <p class="copyright">© 2025 Asiatrix. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const scrollElements = document.querySelectorAll('[data-scroll]');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  scrollElements.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

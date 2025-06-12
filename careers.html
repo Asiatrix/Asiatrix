@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Asiatrix | Careers</title>
+  <link rel="icon" type="image/png" href="logo/favicon.png">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="footer.css" />
+  <script defer src="script.js"></script>
+  <script defer src="footer.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background: #fafafa;
+      color: #1a1a1a;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #1a1a1a;
+      font-weight: 500;
+    }
+
+    .login-icon {
+      font-size: 20px;
+      cursor: pointer;
+      color: #007acc;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #007acc, #00c3ff);
+      color: white;
+      text-align: center;
+      padding: 120px 20px 60px;
+      margin-top: 70px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .content {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .section {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.6s ease-out;
+      margin-bottom: 50px;
+    }
+
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      color: #007acc;
+      margin-bottom: 20px;
+    }
+
+    .section p {
+      font-size: 1.1rem;
+      color: #444;
+      line-height: 1.8;
+    }
+
+    .job-card {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      margin-bottom: 30px;
+      border: 1px solid #e0e0e0;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+      transition: transform 0.3s ease;
+    }
+
+    .job-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .job-card h3 {
+      color: #007acc;
+      margin-bottom: 10px;
+    }
+
+    .job-card p {
+      margin-bottom: 10px;
+    }
+
+    .apply-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #007acc;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-size: 0.95rem;
+      transition: background 0.3s ease;
+    }
+
+    .apply-btn:hover {
+      background: #005c99;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .section h2 {
+        font-size: 1.5rem;
+      }
+
+      nav ul {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+
+<header id="mainHeader" class="transparent">
+    <div class="container">
+<div class="logo">
+  <a href="index.html">
+    <img src="logo/logo.png" alt="Asiatrix Logo" />
+  </a>
+</div>
+      <nav class="desktop-menu">
+        <ul>
+        <li><a href="services.html">What we do</a></li>
+        <li><a href="aboutus.html">Who we are</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="enterprises.html">Enterprise</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+        </ul>
+      </nav>
+
+    <div class="login-icon">
+     <i class="far fa-user"></i>
+    </div>
+
+      <!-- Mobile Hamburger Menu -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="services.html">What we do</a></li>
+        <li><a href="aboutus.html">Who we are</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="enterprises.html">Enterprise</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+<section class="hero">
+  <h1>Careers at Asiatrix</h1>
+  <p>Innovate. Design. Grow with us. Explore current openings and become a part of our future-forward team.</p>
+</section>
+
+<section class="content">
+  <div class="section" data-scroll>
+    <h2>Why Join Asiatrix?</h2>
+    <p>We’re more than a workplace we’re a culture of thinkers, designers, coders, storytellers, and strategists. At Asiatrix, your passion finds purpose, your creativity gets celebrated, and your potential gets unleashed.</p>
+  </div>
+
+  <div class="section" data-scroll>
+    <h2>Open Positions</h2>
+
+    <div class="job-card">
+      <h3>UI/UX Designer</h3>
+      <p><strong>Location:</strong> Remote</p>
+      <p><strong>Experience:</strong> 2+ years</p>
+      <p>Create intuitive digital experiences with a strong design sense and user focus.</p>
+      <a href="mailto:careers@asiatrix.com" class="apply-btn">Apply Now</a>
+    </div>
+
+    <div class="job-card">
+      <h3>Content Strategist</h3>
+      <p><strong>Experience:</strong> 3+ years</p>
+      <p>Lead content creation for global brands, ensuring tone, clarity, and impact.</p>
+      <a href="mailto:careers@asiatrix.com" class="apply-btn">Apply Now</a>
+    </div>
+
+    <div class="job-card">
+      <h3>Frontend Developer</h3>
+      <p><strong>Experience:</strong> 2–4 years</p>
+      <p>Build cutting-edge interfaces with HTML, CSS, JS, and frontend frameworks.</p>
+      <a href="mailto:careers@asiatrix.com" class="apply-btn">Apply Now</a>
+    </div>
+
+    <div class="job-card">
+      <h3>Sales & Partnerships Manager</h3>
+      <p><strong>Experience:</strong> 4+ years</p>
+      <p>Drive strategic alliances and scale our global reach with your business acumen.</p>
+      <a href="mailto:careers@asiatrix.com" class="apply-btn">Apply Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <h2>Innovating Culture, Designing Futures</h2>
+      <div class="footer-links">
+<ul>
+  <li><a href="preferences.html">Preference Center</a></li>
+  <li><a href="careers.html">Careers</a></li>
+  <li><a href="aboutus.html">About Us</a></li>
+  <li><a href="contactus.html">Contact Us</a></li>
+  <li><a href="sitemap.html">Sitemap</a></li>
+</ul>
+<ul>
+  <li><a href="privacy-policy.html">Privacy Statement</a></li>
+  <li><a href="terms-condition.html">Terms & Conditions</a></li>
+  <li><a href="cookie.html">Cookie Policy/Settings</a></li>
+  <li><a href="refund-policy.html">Refund Policy</a></li>
+</ul>
+      </div>
+      <p class="copyright">© 2025 Asiatrix. All Rights Reserved.</p>
+    </div>
+
+<script>
+  const scrollElements = document.querySelectorAll('[data-scroll]');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  scrollElements.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
